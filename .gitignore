@@ -1,0 +1,6 @@
+# Broker/account login credentials - never committed
+credentials/credentials.json
+
+# OS/editor cruft
+.DS_Store
+*.swp

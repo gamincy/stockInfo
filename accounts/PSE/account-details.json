@@ -1,0 +1,15 @@
+{
+  "lastUpdated": "2026-09-12T00:00:00+08:00",
+  "buyingPower": 0,
+  "totalPortfolioValue": 0,
+  "currentStocksValue": 0,
+  "currency": "PHP",
+  "holdings": [
+    {
+      "symbol": "EXAMPLE",
+      "shares": 0,
+      "avgPrice": 0,
+      "currentPrice": 0
+    }
+  ]
+}
