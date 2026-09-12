@@ -164,7 +164,14 @@
 (function(){
   const fmt = (n, opts) => Number(n).toLocaleString('en-PH', opts || {maximumFractionDigits: 2});
   const money = (n) => '₱' + fmt(n, {minimumFractionDigits:2, maximumFractionDigits:2});
-  const aboutUrl = symbol => `https://stockanalysis.com/quote/pse/${encodeURIComponent(symbol)}/company/`;
+  let companyWebsites = {};
+  const aboutUrl = symbol => companyWebsites[symbol]
+    || `https://stockanalysis.com/quote/pse/${encodeURIComponent(symbol)}/company/`;
+
+  fetch('data/PSE/company-websites.json', {cache: 'no-store'})
+    .then(r => r.ok ? r.json() : {})
+    .then(data => { companyWebsites = data || {}; })
+    .catch(() => { /* About links still work via the stockanalysis.com fallback */ });
 
   // --- Account summary ---
   fetch('accounts/PSE/account-details.json', {cache: 'no-store'})

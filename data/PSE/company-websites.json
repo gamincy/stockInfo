@@ -1,0 +1,15 @@
+{
+  "_note": "Official company websites, verified via web search one at a time - NOT guessed or derived from the ticker. Only add an entry here once you've confirmed the domain actually belongs to that company. Tickers not listed here fall back to a stockanalysis.com company-profile page in index.html.",
+  "ACR": "https://www.acr.com.ph/",
+  "IMI": "https://www.global-imi.com/",
+  "AT": "https://atlasmining.com.ph/",
+  "CNPF": "https://www.centurypacific.com.ph/",
+  "ION": "https://www.ionicsgroup.com/",
+  "NRCP": "https://www.nat-re.com/",
+  "PAL": "https://www.philippineairlines.com/",
+  "PERC": "https://petroenergy.com.ph/",
+  "SLI": "https://stalucialand.com.ph/",
+  "TECH": "https://cirtekholdings.com/",
+  "TUGS": "https://www.harborstar.com.ph/",
+  "V": "http://www.vantage.com.ph/"
+}

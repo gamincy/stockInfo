@@ -16,6 +16,7 @@ data/PSE/tickers/manifest.json     # list of known symbols, used for autocomplet
 data/PSE/screener.json             # precomputed momentum screener, used by the screener section
 data/PSE/company-names.json        # ticker -> company name, used by the ticker trend section
 data/PSE/news.json                 # per-company news notes + live news links, used by the screener section
+data/PSE/company-websites.json     # verified official company websites, used by the About links
 credentials/credentials.example.json  # template only (committed)
 credentials/credentials.json          # your real broker login (gitignored, NEVER committed)
 scripts/generate_manifest.py       # regenerates data/PSE/manifest.json after adding new data
@@ -40,10 +41,17 @@ it was last compiled (see `data/PSE/news.json`'s `generated`/`note`
 fields). Ask Claude to refresh it periodically for current picks.
 
 The "About" link (also shown next to the company name in Ticker Trend)
-is generated directly from the symbol as
-`https://stockanalysis.com/quote/pse/<SYMBOL>/company/` — no data file
-to maintain, and it works for every ticker, not just ones with a known
-company name.
+points to the company's real official website when one is on file in
+`data/PSE/company-websites.json` (verified via web search, one at a
+time — never guessed from the ticker or domain-pattern-matched). For
+any ticker not yet in that file, it falls back to a
+`stockanalysis.com/quote/pse/<SYMBOL>/company/` profile page, generated
+directly from the symbol, so the link always works even before a real
+site has been verified for that company.
+
+To add a verified official site for another company, add it to
+`data/PSE/company-websites.json` (`"SYMBOL": "https://..."`) — or ask
+Claude to look one up and add it.
 
 ## PSE Daily Data
 
