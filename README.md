@@ -14,6 +14,7 @@ data/PSE/manifest.json             # list of available dates, used by index.html
 data/PSE/tickers/<SYMBOL>.json     # per-ticker price history, used by the trend chart
 data/PSE/tickers/manifest.json     # list of known symbols, used for autocomplete
 data/PSE/screener.json             # precomputed momentum screener, used by the screener section
+data/PSE/company-names.json        # ticker -> company name, used by the ticker trend section
 credentials/credentials.example.json  # template only (committed)
 credentials/credentials.json          # your real broker login (gitignored, NEVER committed)
 scripts/generate_manifest.py       # regenerates data/PSE/manifest.json after adding new data
@@ -43,12 +44,19 @@ chart.
 
 ## Ticker Trend
 
-Search a symbol under "Ticker Trend" on the page (or tap any symbol in the
-daily data table) to see its price history: a line chart, period
-high/low, and % change over 1M/6M/1Y/5Y/ALL ranges. This is powered by
-`data/PSE/tickers/<SYMBOL>.json`, built from every daily file by
-`scripts/build_ticker_data.py` — one JSON file per ticker instead of the
-page having to scan all 1800+ daily files.
+Search a symbol under "Ticker Trend" on the page (or tap any symbol
+anywhere on the page) to see its price history: company name, a line
+chart, period high/low, and % change over 1M/6M/1Y/5Y/ALL ranges. This is
+powered by `data/PSE/tickers/<SYMBOL>.json`, built from every daily file
+by `scripts/build_ticker_data.py` — one JSON file per ticker instead of
+the page having to scan all 1800+ daily files.
+
+Company names come from `data/PSE/company-names.json`, sourced once from
+a public PSE ticker listing (see git history for the source) and covers
+the ~275 common/major PSE stocks. Obscure preferred-share series and
+small-caps not in that source just show the bare ticker rather than a
+guessed name. To add a name, edit `data/PSE/company-names.json` directly
+(`"SYMBOL": "Company Name"`) and push — no rebuild script needed.
 
 ## ⚠️ Privacy note
 

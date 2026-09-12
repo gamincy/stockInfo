@@ -111,6 +111,7 @@
       <input type="text" id="ticker-symbol" list="ticker-list" placeholder="Search a ticker (e.g. AC, ALI, SM)">
       <datalist id="ticker-list"></datalist>
     </div>
+    <div id="ticker-company-name" style="font-weight:600;margin-bottom:6px" hidden></div>
     <div class="range-buttons" id="range-buttons">
       <button data-range="1M">1M</button>
       <button data-range="6M">6M</button>
@@ -283,23 +284,37 @@
   // --- Ticker trend ---
   const tickerInput = document.getElementById('ticker-symbol');
   const tickerList = document.getElementById('ticker-list');
+  const tickerCompanyName = document.getElementById('ticker-company-name');
   const tickerStatus = document.getElementById('ticker-status');
   const tickerStats = document.getElementById('ticker-stats');
   const chartWrap = document.getElementById('ticker-chart-wrap');
   const canvas = document.getElementById('ticker-chart');
   const rangeButtons = document.getElementById('range-buttons');
   let tickerSymbols = [];
+  let companyNames = {};
   let currentHistory = null;
   let currentRange = 'ALL';
   let debounceTimer = null;
 
-  fetch('data/PSE/tickers/manifest.json', {cache: 'no-store'})
+  const namesPromise = fetch('data/PSE/company-names.json', {cache: 'no-store'})
+    .then(r => r.ok ? r.json() : {})
+    .catch(() => ({}));
+
+  const tickersPromise = fetch('data/PSE/tickers/manifest.json', {cache: 'no-store'})
     .then(r => r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status)))
-    .then(m => {
-      tickerSymbols = m.symbols || [];
-      tickerList.innerHTML = tickerSymbols.map(s => `<option value="${s}">`).join('');
-    })
-    .catch(() => { /* trend search still works without autocomplete */ });
+    .catch(err => {
+      tickerStatus.innerHTML = `<span class="error">Could not load ticker list (${err.message}).</span>`;
+      return {symbols: []};
+    });
+
+  Promise.all([namesPromise, tickersPromise]).then(([names, manifest]) => {
+    companyNames = names || {};
+    tickerSymbols = manifest.symbols || [];
+    tickerList.innerHTML = tickerSymbols.map(s => {
+      const label = companyNames[s] ? ` label="${companyNames[s].replace(/"/g, '&quot;')}"` : '';
+      return `<option value="${s}"${label}>`;
+    }).join('');
+  });
 
   function rangeStartDate(range, lastDateStr){
     if (range === 'ALL') return null;
@@ -410,6 +425,13 @@
     tickerStatus.textContent = 'Loading ' + symbol + '...';
     tickerStats.hidden = true;
     chartWrap.hidden = true;
+    const companyName = companyNames[symbol];
+    if (companyName) {
+      tickerCompanyName.textContent = `${companyName} (${symbol})`;
+      tickerCompanyName.hidden = false;
+    } else {
+      tickerCompanyName.hidden = true;
+    }
     fetch(`data/PSE/tickers/${encodeURIComponent(symbol)}.json`, {cache: 'no-store'})
       .then(r => r.ok ? r.json() : Promise.reject(new Error(r.status === 404 ? 'no data for "' + symbol + '"' : 'HTTP ' + r.status)))
       .then(data => {
