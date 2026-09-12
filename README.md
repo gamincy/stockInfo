@@ -13,11 +13,33 @@ data/PSE/csv/Data_YYYY-MM-DD.txt   # historical daily PSE data (committed, publi
 data/PSE/manifest.json             # list of available dates, used by index.html
 data/PSE/tickers/<SYMBOL>.json     # per-ticker price history, used by the trend chart
 data/PSE/tickers/manifest.json     # list of known symbols, used for autocomplete
+data/PSE/screener.json             # precomputed momentum screener, used by the screener section
 credentials/credentials.example.json  # template only (committed)
 credentials/credentials.json          # your real broker login (gitignored, NEVER committed)
 scripts/generate_manifest.py       # regenerates data/PSE/manifest.json after adding new data
 scripts/build_ticker_data.py       # regenerates data/PSE/tickers/ after adding new data
+scripts/build_momentum_screener.py # regenerates data/PSE/screener.json after adding new data
 ```
+
+## Momentum Screener
+
+The "Momentum Screener" section ranks liquid, currently-active PSE
+tickers by historical closing-price % change over daily/weekly/monthly/
+quarterly windows, showing the top 5 movers per window with the exact
+numbers behind each (start/end price, dates, average daily turnover).
+
+**This is not financial advice or a prediction** — it's a plain,
+disclosed calculation over the data already in this repo
+(`scripts/build_momentum_screener.py`), filtered so thinly-traded or
+stale names don't dominate the list just because of a single odd trade.
+Past performance does not indicate future results.
+
+## PSE Daily Data
+
+Shows, for the selected date: **Most Active** (top 15 by peso value
+traded), **Today's Winners** (top 10 gainers by %), and **Today's
+Losers** (top 10 decliners by %). Tap any symbol to jump to its trend
+chart.
 
 ## Ticker Trend
 
@@ -93,7 +115,8 @@ Drop the new `Data_YYYY-MM-DD.txt` file(s) into `data/PSE/csv/`, then:
 ```bash
 python3 scripts/generate_manifest.py
 python3 scripts/build_ticker_data.py
-git add data/PSE/csv data/PSE/manifest.json data/PSE/tickers
+python3 scripts/build_momentum_screener.py
+git add data/PSE/csv data/PSE/manifest.json data/PSE/tickers data/PSE/screener.json
 git commit -m "Add PSE data for <date(s)>"
 git push
 ```
