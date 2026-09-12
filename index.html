@@ -164,6 +164,7 @@
 (function(){
   const fmt = (n, opts) => Number(n).toLocaleString('en-PH', opts || {maximumFractionDigits: 2});
   const money = (n) => '₱' + fmt(n, {minimumFractionDigits:2, maximumFractionDigits:2});
+  const aboutUrl = symbol => `https://stockanalysis.com/quote/pse/${encodeURIComponent(symbol)}/company/`;
 
   // --- Account summary ---
   fetch('accounts/PSE/account-details.json', {cache: 'no-store'})
@@ -422,12 +423,9 @@
     tickerStats.hidden = true;
     chartWrap.hidden = true;
     const companyName = companyNames[symbol];
-    if (companyName) {
-      tickerCompanyName.textContent = `${companyName} (${symbol})`;
-      tickerCompanyName.hidden = false;
-    } else {
-      tickerCompanyName.hidden = true;
-    }
+    tickerCompanyName.innerHTML = `${companyName ? `${companyName} (${symbol})` : symbol}
+      <a href="${aboutUrl(symbol)}" target="_blank" rel="noopener" style="font-weight:normal;font-size:.8rem;margin-left:6px">About →</a>`;
+    tickerCompanyName.hidden = false;
     fetch(`data/PSE/tickers/${encodeURIComponent(symbol)}.json`, {cache: 'no-store'})
       .then(r => r.ok ? r.json() : Promise.reject(new Error(r.status === 404 ? 'no data for "' + symbol + '"' : 'HTTP ' + r.status)))
       .then(data => {
@@ -495,19 +493,19 @@
     screenerPicks.innerHTML = picks.map((p, i) => {
       const cls = p.pctChange >= 0 ? 'up' : 'down';
       const news = newsData[p.symbol];
-      const newsHtml = news
-        ? `<div class="pick-news">
-            ${news.note ? `📰 ${news.note}` : ''}
-            ${news.newsUrl ? ` <a href="${news.newsUrl}" target="_blank" rel="noopener">More news →</a>` : ''}
-          </div>`
-        : '';
+      const links = [
+        `<a href="${aboutUrl(p.symbol)}" target="_blank" rel="noopener">About →</a>`,
+        news && news.newsUrl ? `<a href="${news.newsUrl}" target="_blank" rel="noopener">More news →</a>` : '',
+      ].filter(Boolean).join(' ');
       return `<div class="pick">
         <div class="pick-head">
           <span>#${i + 1} <span class="sym-link" data-symbol="${p.symbol}">${p.symbol}</span></span>
           <span class="${cls}">${p.pctChange >= 0 ? '+' : ''}${fmt(p.pctChange)}%</span>
         </div>
         <div class="pick-reason">${p.reason}</div>
-        ${newsHtml}
+        <div class="pick-news">
+          ${news && news.note ? `📰 ${news.note}<br>` : ''}${links}
+        </div>
       </div>`;
     }).join('');
   }
