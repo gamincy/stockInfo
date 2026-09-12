@@ -42,6 +42,14 @@
   .muted{color:var(--muted);font-size:.85rem}
   .error{color:var(--down);font-size:.85rem}
   .holding-row td{cursor:default}
+  .range-buttons{display:flex;gap:6px;flex-wrap:wrap}
+  .range-buttons button{background:var(--input-bg);color:var(--text);border:1px solid var(--border);
+    border-radius:8px;padding:6px 12px;font-size:.8rem;cursor:pointer}
+  .range-buttons button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .chart-wrap{position:relative;width:100%;height:220px;margin-top:8px}
+  .chart-wrap canvas{width:100%;height:100%;display:block}
+  .sym-link{color:var(--accent);cursor:pointer;text-decoration:underline}
+  #ticker-symbol{text-transform:uppercase}
 </style>
 </head>
 <body>
@@ -63,6 +71,26 @@
         <thead><tr><th>Symbol</th><th>Shares</th><th>Avg Price</th><th>Current</th><th>Market Value</th><th>Gain/Loss</th></tr></thead>
         <tbody id="holdings-body"></tbody>
       </table>
+    </div>
+  </div>
+
+  <h2>Ticker Trend</h2>
+  <div class="card">
+    <div class="controls">
+      <input type="text" id="ticker-symbol" list="ticker-list" placeholder="Search a ticker (e.g. AC, ALI, SM)">
+      <datalist id="ticker-list"></datalist>
+    </div>
+    <div class="range-buttons" id="range-buttons">
+      <button data-range="1M">1M</button>
+      <button data-range="6M">6M</button>
+      <button data-range="1Y">1Y</button>
+      <button data-range="5Y">5Y</button>
+      <button data-range="ALL" class="active">ALL</button>
+    </div>
+    <div id="ticker-status" class="muted" style="margin-top:8px"></div>
+    <div class="stats" id="ticker-stats" hidden></div>
+    <div class="chart-wrap" id="ticker-chart-wrap" hidden>
+      <canvas id="ticker-chart"></canvas>
     </div>
   </div>
 
@@ -145,7 +173,7 @@
       const chgNum = parseFloat(change);
       const cls = chgNum > 0 ? 'up' : (chgNum < 0 ? 'down' : '');
       return `<tr>
-        <td style="text-align:left">${sym}</td>
+        <td style="text-align:left"><span class="sym-link" data-symbol="${sym}">${sym}</span></td>
         <td>${last}</td>
         <td class="${cls}">${change}</td>
         <td class="${cls}">${pctChange}</td>
@@ -184,6 +212,185 @@
 
   dateSelect.addEventListener('change', () => loadDate(dateSelect.value));
   symbolFilter.addEventListener('input', renderRows);
+
+  // --- Ticker trend ---
+  const tickerInput = document.getElementById('ticker-symbol');
+  const tickerList = document.getElementById('ticker-list');
+  const tickerStatus = document.getElementById('ticker-status');
+  const tickerStats = document.getElementById('ticker-stats');
+  const chartWrap = document.getElementById('ticker-chart-wrap');
+  const canvas = document.getElementById('ticker-chart');
+  const rangeButtons = document.getElementById('range-buttons');
+  let tickerSymbols = [];
+  let currentHistory = null;
+  let currentRange = 'ALL';
+  let debounceTimer = null;
+
+  fetch('data/PSE/tickers/manifest.json', {cache: 'no-store'})
+    .then(r => r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status)))
+    .then(m => {
+      tickerSymbols = m.symbols || [];
+      tickerList.innerHTML = tickerSymbols.map(s => `<option value="${s}">`).join('');
+    })
+    .catch(() => { /* trend search still works without autocomplete */ });
+
+  function rangeStartDate(range, lastDateStr){
+    if (range === 'ALL') return null;
+    const last = new Date(lastDateStr);
+    const d = new Date(last);
+    if (range === '1M') d.setMonth(d.getMonth() - 1);
+    else if (range === '6M') d.setMonth(d.getMonth() - 6);
+    else if (range === '1Y') d.setFullYear(d.getFullYear() - 1);
+    else if (range === '5Y') d.setFullYear(d.getFullYear() - 5);
+    return d.toISOString().slice(0, 10);
+  }
+
+  function visibleHistory(){
+    if (!currentHistory || !currentHistory.length) return [];
+    const lastDate = currentHistory[currentHistory.length - 1].date;
+    const start = rangeStartDate(currentRange, lastDate);
+    return start ? currentHistory.filter(p => p.date >= start) : currentHistory;
+  }
+
+  function drawChart(){
+    const points = visibleHistory().filter(p => p.close != null);
+    const wrap = chartWrap;
+    const dpr = window.devicePixelRatio || 1;
+    const w = wrap.clientWidth, h = wrap.clientHeight;
+    canvas.width = w * dpr; canvas.height = h * dpr;
+    const ctx = canvas.getContext('2d');
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, w, h);
+    if (points.length < 2) return;
+
+    const pad = {top: 12, right: 8, bottom: 18, left: 8};
+    const closes = points.map(p => p.close);
+    const min = Math.min(...closes), max = Math.max(...closes);
+    const span = (max - min) || 1;
+    const plotW = w - pad.left - pad.right;
+    const plotH = h - pad.top - pad.bottom;
+    const x = i => pad.left + (i / (points.length - 1)) * plotW;
+    const y = v => pad.top + plotH - ((v - min) / span) * plotH;
+
+    const styles = getComputedStyle(document.documentElement);
+    const border = styles.getPropertyValue('--border').trim();
+    const muted = styles.getPropertyValue('--muted').trim();
+    const lastVal = closes[closes.length - 1];
+    const firstVal = closes[0];
+    const lineColor = lastVal >= firstVal
+      ? styles.getPropertyValue('--up').trim()
+      : styles.getPropertyValue('--down').trim();
+
+    // gridlines + min/max labels
+    ctx.strokeStyle = border;
+    ctx.lineWidth = 1;
+    [min, max].forEach(v => {
+      const yy = y(v);
+      ctx.beginPath(); ctx.moveTo(pad.left, yy); ctx.lineTo(w - pad.right, yy); ctx.stroke();
+    });
+    ctx.fillStyle = muted;
+    ctx.font = '10px -apple-system, sans-serif';
+    ctx.textBaseline = 'bottom';
+    ctx.fillText(max.toFixed(2), pad.left, y(max) - 2);
+    ctx.textBaseline = 'top';
+    ctx.fillText(min.toFixed(2), pad.left, y(min) + 2);
+
+    // price line
+    ctx.strokeStyle = lineColor;
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    points.forEach((p, i) => {
+      const px = x(i), py = y(p.close);
+      if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    });
+    ctx.stroke();
+
+    // last point marker
+    ctx.fillStyle = lineColor;
+    ctx.beginPath();
+    ctx.arc(x(points.length - 1), y(lastVal), 3, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  function renderStats(){
+    const points = visibleHistory().filter(p => p.close != null);
+    if (!points.length) { tickerStats.hidden = true; return; }
+    const closes = points.map(p => p.close);
+    const last = closes[closes.length - 1];
+    const first = closes[0];
+    const high = Math.max(...closes);
+    const low = Math.min(...closes);
+    const pctChange = first ? ((last - first) / first) * 100 : 0;
+    const cls = pctChange > 0 ? 'up' : (pctChange < 0 ? 'down' : '');
+    tickerStats.innerHTML = `
+      <div class="stat"><div class="label">Last Close</div><div class="value">${fmt(last)}</div></div>
+      <div class="stat"><div class="label">Period High</div><div class="value">${fmt(high)}</div></div>
+      <div class="stat"><div class="label">Period Low</div><div class="value">${fmt(low)}</div></div>
+      <div class="stat"><div class="label">Period Change</div><div class="value ${cls}">${pctChange >= 0 ? '+' : ''}${fmt(pctChange)}%</div></div>
+    `;
+    tickerStats.hidden = false;
+  }
+
+  function renderTicker(){
+    renderStats();
+    chartWrap.hidden = !currentHistory || currentHistory.length < 2;
+    if (!chartWrap.hidden) requestAnimationFrame(drawChart);
+  }
+
+  function loadTicker(symbolRaw){
+    const symbol = symbolRaw.trim().toUpperCase();
+    if (!symbol) return;
+    tickerStatus.textContent = 'Loading ' + symbol + '...';
+    tickerStats.hidden = true;
+    chartWrap.hidden = true;
+    fetch(`data/PSE/tickers/${encodeURIComponent(symbol)}.json`, {cache: 'no-store'})
+      .then(r => r.ok ? r.json() : Promise.reject(new Error(r.status === 404 ? 'no data for "' + symbol + '"' : 'HTTP ' + r.status)))
+      .then(data => {
+        currentHistory = data.history || [];
+        const first = currentHistory[0], last = currentHistory[currentHistory.length - 1];
+        tickerStatus.textContent = currentHistory.length
+          ? `${symbol}: ${currentHistory.length} trading days (${first.date} to ${last.date})`
+          : `No trend data for ${symbol}`;
+        renderTicker();
+      })
+      .catch(err => {
+        currentHistory = null;
+        tickerStats.hidden = true;
+        chartWrap.hidden = true;
+        tickerStatus.innerHTML = `<span class="error">Could not load trend (${err.message}).</span>`;
+      });
+  }
+
+  tickerInput.addEventListener('input', () => {
+    clearTimeout(debounceTimer);
+    const val = tickerInput.value;
+    debounceTimer = setTimeout(() => {
+      if (val.trim()) loadTicker(val);
+    }, 400);
+  });
+  tickerInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter') { clearTimeout(debounceTimer); loadTicker(tickerInput.value); }
+  });
+
+  rangeButtons.addEventListener('click', e => {
+    const btn = e.target.closest('button[data-range]');
+    if (!btn) return;
+    rangeButtons.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentRange = btn.dataset.range;
+    if (currentHistory) renderTicker();
+  });
+
+  document.getElementById('data-body').addEventListener('click', e => {
+    const link = e.target.closest('.sym-link');
+    if (!link) return;
+    const symbol = link.dataset.symbol;
+    tickerInput.value = symbol;
+    loadTicker(symbol);
+    document.querySelector('#ticker-symbol').scrollIntoView({behavior: 'smooth', block: 'center'});
+  });
+
+  window.addEventListener('resize', () => { if (currentHistory) requestAnimationFrame(drawChart); });
 })();
 </script>
 </body>

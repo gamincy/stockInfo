@@ -11,10 +11,22 @@ index.html                       # the page you open on your phone
 accounts/PSE/account-details.json  # buying power / portfolio value (committed, public)
 data/PSE/csv/Data_YYYY-MM-DD.txt   # historical daily PSE data (committed, public)
 data/PSE/manifest.json             # list of available dates, used by index.html
+data/PSE/tickers/<SYMBOL>.json     # per-ticker price history, used by the trend chart
+data/PSE/tickers/manifest.json     # list of known symbols, used for autocomplete
 credentials/credentials.example.json  # template only (committed)
 credentials/credentials.json          # your real broker login (gitignored, NEVER committed)
-scripts/generate_manifest.py       # regenerates manifest.json after adding new data
+scripts/generate_manifest.py       # regenerates data/PSE/manifest.json after adding new data
+scripts/build_ticker_data.py       # regenerates data/PSE/tickers/ after adding new data
 ```
+
+## Ticker Trend
+
+Search a symbol under "Ticker Trend" on the page (or tap any symbol in the
+daily data table) to see its price history: a line chart, period
+high/low, and % change over 1M/6M/1Y/5Y/ALL ranges. This is powered by
+`data/PSE/tickers/<SYMBOL>.json`, built from every daily file by
+`scripts/build_ticker_data.py` — one JSON file per ticker instead of the
+page having to scan all 1800+ daily files.
 
 ## ⚠️ Privacy note
 
@@ -80,7 +92,8 @@ Drop the new `Data_YYYY-MM-DD.txt` file(s) into `data/PSE/csv/`, then:
 
 ```bash
 python3 scripts/generate_manifest.py
-git add data/PSE/csv data/PSE/manifest.json
+python3 scripts/build_ticker_data.py
+git add data/PSE/csv data/PSE/manifest.json data/PSE/tickers
 git commit -m "Add PSE data for <date(s)>"
 git push
 ```
