@@ -1,6 +1,9 @@
 # Broker/account login credentials - never committed
 credentials/credentials.json
 
+# GitHub personal access tokens - never committed
+*token*.txt
+
 # OS/editor cruft
 .DS_Store
 *.swp
