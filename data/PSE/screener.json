@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-12T03:15:14.498625Z",
+  "generated": "2026-09-12T03:43:57.732998Z",
   "asOfDate": "2026-09-11",
   "universeSize": 125,
-  "methodology": "Ranks the 125 most liquid PSE tickers that traded on the latest session (2026-09-11) (top 50% by 21-trading-day average peso value traded) by closing-price % change over each lookback window. A ticker is skipped for a window if its nearest prior trade is too stale to represent that window meaningfully. This is a historical momentum ranking only - not a prediction, recommendation, or financial advice. Past performance does not indicate future results.",
+  "methodology": "Ranks the 125 most liquid PSE tickers that traded on the latest session (2026-09-11) (top 50% by 21-trading-day average peso value traded) by closing-price % change over each lookback window. A ticker is skipped for a window if its nearest prior trade is too stale to represent that window meaningfully.",
   "periods": {
     "daily": {
       "label": "Daily",

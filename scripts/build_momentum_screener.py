@@ -82,9 +82,7 @@ def main():
             f"by {LIQUIDITY_LOOKBACK}-trading-day average peso value traded) by "
             "closing-price % change over each lookback window. A ticker is skipped "
             "for a window if its nearest prior trade is too stale to represent that "
-            "window meaningfully. This is a historical momentum ranking only - not "
-            "a prediction, recommendation, or financial advice. Past performance "
-            "does not indicate future results."
+            "window meaningfully."
         ),
         "periods": {},
     }

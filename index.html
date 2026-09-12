@@ -51,7 +51,7 @@
   .sym-link{color:var(--accent);cursor:pointer;text-decoration:underline}
   #ticker-symbol{text-transform:uppercase}
   .card h3{margin:0 0 10px;font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
-  .disclaimer{background:var(--bg);border:1px solid var(--border);border-radius:10px;
+  .info-box{background:var(--bg);border:1px solid var(--border);border-radius:10px;
     padding:10px 12px;font-size:.78rem;color:var(--muted);margin-bottom:14px;line-height:1.4}
   .period-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
   .period-tabs button{background:var(--input-bg);color:var(--text);border:1px solid var(--border);
@@ -62,6 +62,8 @@
   .pick-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
   .pick-head .sym-link{font-weight:600;font-size:.95rem}
   .pick-reason{font-size:.8rem;color:var(--muted);margin-top:3px;line-height:1.4}
+  .pick-news{font-size:.8rem;color:var(--muted);margin-top:5px;line-height:1.4}
+  .pick-news a{color:var(--accent);text-decoration:none;white-space:nowrap}
 </style>
 </head>
 <body>
@@ -88,13 +90,7 @@
 
   <h2>Momentum Screener</h2>
   <div class="card">
-    <div class="disclaimer">
-      <strong>Not financial advice.</strong> This is a backward-looking ranking of
-      historical closing-price % change among liquid, currently-active PSE
-      stocks &mdash; not a prediction or a recommendation to buy or sell.
-      Past performance does not indicate future results.
-      <span id="screener-methodology"></span>
-    </div>
+    <div class="info-box" id="screener-methodology"></div>
     <div class="period-tabs" id="screener-tabs">
       <button data-period="daily" class="active">Daily</button>
       <button data-period="weekly">Weekly</button>
@@ -485,6 +481,7 @@
   const screenerPicks = document.getElementById('screener-picks');
   const screenerMethodology = document.getElementById('screener-methodology');
   let screenerData = null;
+  let newsData = {};
   let currentScreenerPeriod = 'daily';
 
   function renderScreenerPeriod(){
@@ -497,22 +494,37 @@
     }
     screenerPicks.innerHTML = picks.map((p, i) => {
       const cls = p.pctChange >= 0 ? 'up' : 'down';
+      const news = newsData[p.symbol];
+      const newsHtml = news
+        ? `<div class="pick-news">
+            ${news.note ? `📰 ${news.note}` : ''}
+            ${news.newsUrl ? ` <a href="${news.newsUrl}" target="_blank" rel="noopener">More news →</a>` : ''}
+          </div>`
+        : '';
       return `<div class="pick">
         <div class="pick-head">
           <span>#${i + 1} <span class="sym-link" data-symbol="${p.symbol}">${p.symbol}</span></span>
           <span class="${cls}">${p.pctChange >= 0 ? '+' : ''}${fmt(p.pctChange)}%</span>
         </div>
         <div class="pick-reason">${p.reason}</div>
+        ${newsHtml}
       </div>`;
     }).join('');
   }
 
-  fetch('data/PSE/screener.json', {cache: 'no-store'})
-    .then(r => r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status)))
-    .then(data => {
+  const screenerPromise = fetch('data/PSE/screener.json', {cache: 'no-store'})
+    .then(r => r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status)));
+
+  const newsPromise = fetch('data/PSE/news.json', {cache: 'no-store'})
+    .then(r => r.ok ? r.json() : {companies: {}})
+    .catch(() => ({companies: {}}));
+
+  Promise.all([screenerPromise, newsPromise])
+    .then(([data, news]) => {
       screenerData = data;
+      newsData = news.companies || {};
       screenerStatus.textContent = `As of ${data.asOfDate} • universe: ${data.universeSize} liquid, active tickers`;
-      screenerMethodology.textContent = ' ' + data.methodology;
+      screenerMethodology.textContent = data.methodology;
       renderScreenerPeriod();
     })
     .catch(err => {

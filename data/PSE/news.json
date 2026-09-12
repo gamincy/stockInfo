@@ -1,0 +1,58 @@
+{
+  "generated": "2026-09-12T00:00:00Z",
+  "note": "Compiled via web search, not a live feed. Refresh by asking Claude to look up news again for the current screener picks. The newsUrl for each company is a live, continuously-updating source you can open for anything more recent than the note below.",
+  "companies": {
+    "ABG": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-ABG/news/",
+      "note": null
+    },
+    "ACR": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-ACR/news/",
+      "note": "Sold its remaining stake in Seafront Resources Corp. (about ₱42M) in March 2026 as part of a portfolio liquidity move."
+    },
+    "AT": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-AT/news/",
+      "note": null
+    },
+    "CNPF": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-CNPF/news/",
+      "note": "Acquired Coco Harvest Inc., which owns a coconut processing facility in Misamis Occidental, for about $40 million."
+    },
+    "IMI": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-IMI/news/",
+      "note": null
+    },
+    "ION": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-ION/news/",
+      "note": "Paid a ₱0.10/share dividend (about 7.1% yield) in June 2026."
+    },
+    "NRCP": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-NRCP/news/",
+      "note": null
+    },
+    "PAL": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-PAL/news/",
+      "note": "Philippine Airlines has placed orders for Boeing 787-10 and Airbus A350-1000 aircraft."
+    },
+    "PERC": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-PERC/news/",
+      "note": "Agreed to acquire a 40% stake in PetroWind Energy Inc. from BCPG for about ₱1.8B; the Philippine Competition Commission cleared the deal on July 22, 2026."
+    },
+    "SLI": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-SLI/news/",
+      "note": "Announced a special dividend of ₱0.04/share, record date October 17, 2025."
+    },
+    "TECH": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-TECH/news/",
+      "note": "A Cirtek unit signed a multi-million-dollar project with a Silicon Valley-based tech company; the company also approved an increase in authorized capital stock."
+    },
+    "TUGS": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-TUGS/news/",
+      "note": null
+    },
+    "V": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-V/news/",
+      "note": "Reported improved quarterly results in August 2026: gross revenue ₱309.1M vs ₱295.2M prior period, net income attributable ₱417.6M vs ₱191.4M prior period."
+    }
+  }
+}
