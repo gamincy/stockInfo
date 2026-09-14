@@ -147,6 +147,13 @@ git commit -m "Add PSE data for <date(s)>"
 git push
 ```
 
+Then check whether any symbol in the new `screener.json` picks is
+missing from `data/PSE/company-names.json`,
+`data/PSE/company-websites.json`, or `data/PSE/news.json` — if so,
+look it up (web search, never guessed) and add it before pushing those
+files too. This is standing behavior for this project: always do it
+automatically for new screener entrants, without waiting to be asked.
+
 ## Column mapping (best-effort)
 
 Each data file is colon-delimited, one row per stock, no header. The
