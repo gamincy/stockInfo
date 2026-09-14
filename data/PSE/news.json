@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-12T00:00:00Z",
+  "generated": "2026-09-14T00:00:00Z",
   "note": "Compiled via web search, not a live feed. Refresh by asking Claude to look up news again for the current screener picks. The newsUrl for each company is a live, continuously-updating source you can open for anything more recent than the note below.",
   "companies": {
     "ABG": {
@@ -53,6 +53,18 @@
     "V": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-V/news/",
       "note": "Reported improved quarterly results in August 2026: gross revenue ₱309.1M vs ₱295.2M prior period, net income attributable ₱417.6M vs ₱191.4M prior period."
+    },
+    "PX": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-PX/news/",
+      "note": "Paid a ₱0.04/share dividend on March 25, 2026; average 1-year analyst price target was recently revised to about ₱19."
+    },
+    "CNVRG": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-CNVRG/news/",
+      "note": "Issued updated FY2026 guidance projecting 4-6% revenue growth; said it's considering expanding (not acquiring) its partnership with SKY Cable Corporation."
+    },
+    "ACPB3": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-ACPB3/news/",
+      "note": "Ticker was renamed from APB3R to ACPB3 in October 2024 following a follow-on public offering; this is a preferred share of Ayala Corporation (AC)."
     }
   }
 }
