@@ -65,6 +65,14 @@
     "ACPB3": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-ACPB3/news/",
       "note": "Ticker was renamed from APB3R to ACPB3 in October 2024 following a follow-on public offering; this is a preferred share of Ayala Corporation (AC)."
+    },
+    "PAX": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-PAX/news/",
+      "note": "H1 2026 net income of ₱64.4M was driven mainly by investment income, as gross operating revenue from its Scopeworks Asia BPO subsidiary was only about ₱2.5M."
+    },
+    "PHR": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-PHR/news/",
+      "note": "Received a US$42.5M funding advance from Emerald Development Holdings and secured PSE board approval for a follow-on share offering in 2026, alongside continued construction of its Emerald Bay resort in Mactan."
     }
   }
 }
