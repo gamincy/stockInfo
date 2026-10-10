@@ -191,9 +191,10 @@
       if (Array.isArray(acct.holdings) && acct.holdings.length) {
         const body = document.getElementById('holdings-body');
         body.innerHTML = acct.holdings.map(h => {
-          const mv = (h.shares || 0) * (h.currentPrice || 0);
+          // Prefer the broker's own figures (net of selling fees) when present.
+          const mv = h.marketValue ?? (h.shares || 0) * (h.currentPrice || 0);
           const cost = (h.shares || 0) * (h.avgPrice || 0);
-          const gl = mv - cost;
+          const gl = h.gainLoss ?? mv - cost;
           const cls = gl > 0 ? 'up' : (gl < 0 ? 'down' : '');
           return `<tr class="holding-row">
             <td style="text-align:left">${h.symbol}</td>

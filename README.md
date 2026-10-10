@@ -121,22 +121,33 @@ cp credentials/credentials.example.json credentials/credentials.json
 # edit credentials/credentials.json with your real broker login
 ```
 
-## Updating your account details
+## Automatic updates (since 2026-10-10)
 
-Edit `accounts/PSE/account-details.json` with current numbers, then:
+This repo now lives at `/home/test/claude-projects/Stocks/stockInfo` and is
+fed automatically by the sibling `COLTrader` and `NightProc_V2` tools via
+`../data/publish-stockinfo.sh`, which cron runs after each of their jobs:
 
-```bash
-git add accounts/PSE/account-details.json
-git commit -m "Update account details"
-git push
-```
+- `nightproc get-data` (3:02 PM, trading days) -> new `data/PSE/csv/Data_*.txt`,
+  then the manifest, ticker and screener files are rebuilt automatically.
+- `coltrader fetch-port` (3:10 PM, trading days) -> `accounts/PSE/account-details.json`
+  (buying power, totals, and per-holding shares/avg price/market value/gain-loss
+  straight from COL).
+- `nightproc today-update-list` (4:00 PM daily) -> `data/PSE/PSEIValue.txt`.
 
-The site picks up the change within a minute or two of GitHub Pages
-rebuilding.
+The script pushes as `gamincy` using `gamincy_token.txt` (gitignored), only
+stages `data/PSE` and `accounts/PSE/account-details.json`, and does nothing
+if there are no changes. Run it by hand after a manual fetch, or with
+`--no-push` to commit locally only.
 
-## Adding new daily PSE data
+## Updating your account details by hand
 
-Drop the new `Data_YYYY-MM-DD.txt` file(s) into `data/PSE/csv/`, then:
+Normally automatic (see above). To override, edit
+`accounts/PSE/account-details.json`, then commit and push it - but the next
+`coltrader fetch-port` run will overwrite your edit.
+
+## Adding new daily PSE data by hand
+
+Normally automatic (see above). For backfilling, drop the new `Data_YYYY-MM-DD.txt` file(s) into `data/PSE/csv/`, then:
 
 ```bash
 python3 scripts/generate_manifest.py
