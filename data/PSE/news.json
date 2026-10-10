@@ -73,6 +73,42 @@
     "PHR": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-PHR/news/",
       "note": "Received a US$42.5M funding advance from Emerald Development Holdings and secured PSE board approval for a follow-on share offering in 2026, alongside continued construction of its Emerald Bay resort in Mactan."
+    },
+    "APX": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-APX/news/",
+      "note": "Enrique Razon Jr.'s holding company raised its stake to 67% in July 2026 via a cross transaction at ₱14.25/share."
+    },
+    "CEB": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-CEB/news/",
+      "note": "Q1 2026 revenue rose 10% to ₱33.3B on 7.5M passengers (+8%); wet-leased an A320neo with crew to Vietnam Airlines from Jul 15 to Sep 7, 2026."
+    },
+    "FCG": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-FCG/news/",
+      "note": "Board approved a voluntary delisting on Oct 7, 2026: tender offer at ₱0.82/share, shareholder vote set for Nov 13."
+    },
+    "FGEN": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-FGEN/news/",
+      "note": "Paid a dividend on Jun 30, 2026; an Oct 2, 2026 filing disclosed a director's resignation."
+    },
+    "FOOD": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-FOOD/news/",
+      "note": "2025 consolidated revenue rose 9% to US$78.8M, mostly from tuna; earlier exited its US business and sold Indonesian assets to focus on the Philippines and New Zealand."
+    },
+    "LBC": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-LBC/news/",
+      "note": "H1 2026 net income fell 34.4% to about ₱119M on higher non-operating charges and taxes; service revenue grew 3% to ₱7.22B."
+    },
+    "OPM": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-OPM/news/",
+      "note": null
+    },
+    "PLUS": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-PLUS/news/",
+      "note": "H1 2026 revenue fell 31% to ₱32.85B; S&P assigned a B+ (stable) rating (disclosed Sep 28, 2026); CLSA cut its view on Oct 5, 2026 citing weaker depositing users."
+    },
+    "SGP": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-SGP/news/",
+      "note": "Shares sold off in late June 2026 after ERC Resolution No. 18 let non-NGCP firms build transmission assets; Maharlika's ₱19.7B deal for a 20% stake was targeted to close in H1 2026."
     }
   }
 }

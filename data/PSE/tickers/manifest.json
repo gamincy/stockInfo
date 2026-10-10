@@ -29,6 +29,8 @@
     "ALCPC",
     "ALCPD",
     "ALCPF",
+    "ALCPG",
+    "ALCPH",
     "ALHI",
     "ALI",
     "ALLDY",
@@ -218,6 +220,7 @@
     "LRW",
     "LSC",
     "LTG",
+    "LTL",
     "MA",
     "MAB",
     "MAC",
@@ -413,6 +416,6 @@
     "XG",
     "ZHI"
   ],
-  "count": 412,
-  "generated": "2026-09-16T14:19:58.299723Z"
+  "count": 415,
+  "generated": "2026-10-10T10:06:21.258121Z"
 }
