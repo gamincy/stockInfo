@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14T00:00:00Z",
+  "generated": "2026-10-10T10:42:19Z",
   "note": "Compiled via web search, not a live feed. Refresh by asking Claude to look up news again for the current screener picks. The newsUrl for each company is a live, continuously-updating source you can open for anything more recent than the note below.",
   "companies": {
     "ABG": {
@@ -12,7 +12,7 @@
     },
     "AT": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-AT/news/",
-      "note": null
+      "note": "Sy-led Dominion Holdings agreed on Aug 7, 2026 to buy Anglo Philippine's subscription rights to 727.2M Atlas shares (~20.4%) for ₱857M, lifting the Sy family to 54.48%; SM Investments plans to move its ~34% stake to Dominion by 2027."
     },
     "CNPF": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-CNPF/news/",
@@ -32,11 +32,11 @@
     },
     "PAL": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-PAL/news/",
-      "note": "Philippine Airlines has placed orders for Boeing 787-10 and Airbus A350-1000 aircraft."
+      "note": "H1 2026 net loss attributable of ₱1.84B vs ₱7.66B profit a year earlier, with a ₱6.12B Q2 loss (filed Aug 13, 2026); announced Sep 25 plans to resume Manila–Delhi and Mumbai flights in December 2026."
     },
     "PERC": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-PERC/news/",
-      "note": "Agreed to acquire a 40% stake in PetroWind Energy Inc. from BCPG for about ₱1.8B; the Philippine Competition Commission cleared the deal on July 22, 2026."
+      "note": "Board approved in late Aug 2026 a term sheet to sell 35% of PetroWind Energy to Japan's SMFL Mirai Partners for about ₱1.7B, cutting its direct stake to 25%; H1 2026 net income rose 7% to ₱498M on revenue of ₱2.16B."
     },
     "SLI": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-SLI/news/",
@@ -48,7 +48,7 @@
     },
     "TUGS": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-TUGS/news/",
-      "note": null
+      "note": "H1 2026 net income jumped about 375% to roughly ₱82.7M on 6.3% higher service income, helped by ₱76.9M in salvage income from the grounded bulk carrier MV Giyas off Palawan (reported Aug 2026)."
     },
     "V": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-V/news/",
@@ -76,11 +76,11 @@
     },
     "APX": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-APX/news/",
-      "note": "Enrique Razon Jr.'s holding company raised its stake to 67% in July 2026 via a cross transaction at ₱14.25/share."
+      "note": "H1 2026 net income rose 68% to ₱5.39B on revenue up 35% to ₱12.84B as higher gold and silver prices offset lower volumes (reported Aug 12, 2026); Razon's holding firm raised its stake to 67% in July."
     },
     "CEB": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-CEB/news/",
-      "note": "Q1 2026 revenue rose 10% to ₱33.3B on 7.5M passengers (+8%); wet-leased an A320neo with crew to Vietnam Airlines from Jul 15 to Sep 7, 2026."
+      "note": "Swung to an H1 2026 net loss of ₱5.87B from a ₱8.97B profit as fuel costs and ₱2.46B in FX losses pushed expenses up 23%; revenue rose 8% to ₱68.56B on 14.5M passengers (disclosed Aug 6, 2026)."
     },
     "FCG": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-FCG/news/",
@@ -88,11 +88,11 @@
     },
     "FGEN": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-FGEN/news/",
-      "note": "Paid a dividend on Jun 30, 2026; an Oct 2, 2026 filing disclosed a director's resignation."
+      "note": "Confirmed in mid-July 2026 an unsolicited, non-binding ~US$5B bid from Indonesia's Barito Renewables for its geothermal unit EDC, later saying it has no plans to sell; an Oct 2, 2026 filing disclosed a director's resignation."
     },
     "FOOD": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-FOOD/news/",
-      "note": "2025 consolidated revenue rose 9% to US$78.8M, mostly from tuna; earlier exited its US business and sold Indonesian assets to focus on the Philippines and New Zealand."
+      "note": "Q1 2026 revenue fell 55% to US$8.93M with a US$2.6M net loss after an extended plant shutdown; named Kirby J. Rasos general manager effective July 1, 2026."
     },
     "LBC": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-LBC/news/",
@@ -108,7 +108,7 @@
     },
     "SGP": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-SGP/news/",
-      "note": "Shares sold off in late June 2026 after ERC Resolution No. 18 let non-NGCP firms build transmission assets; Maharlika's ₱19.7B deal for a 20% stake was targeted to close in H1 2026."
+      "note": "Maharlika's ₱19.7B deal for a 20% stake, signed in Jan 2025 and targeted to close in H1 2026, was reported delayed in mid-Aug 2026 and may close before year-end; shares fell in late June after ERC Resolution No. 18 opened transmission to non-NGCP firms."
     }
   }
 }
