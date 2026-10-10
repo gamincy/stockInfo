@@ -35,10 +35,15 @@ because of a single odd trade.
 
 Each pick also shows a short news note (where one was found), a "More
 news" link to a live, continuously-updating source, and an "About" link
-to a company profile page. Unlike the price data, news isn't regenerated
-by a script — it requires a web search, so it's a snapshot from whenever
-it was last compiled (see `data/PSE/news.json`'s `generated`/`note`
-fields). Ask Claude to refresh it periodically for current picks.
+to a company profile page. News requires a web search, so since
+2026-10-10 it's refreshed automatically at 8 PM on trading days by
+`../data/refresh-news.sh`, which runs headless Claude Code (web search
+only, in a scratch directory) for the current picks, also looking up
+names and verified websites for new entrants. `../data/refresh_news_check.py`
+rejects any edit outside the current picks or to an already-verified
+website/name before anything is published. Output goes to
+`../data/news.log`. It's still a snapshot as of `data/PSE/news.json`'s
+`generated` time, not a live feed.
 
 The "About" link (also shown next to the company name in Ticker Trend)
 points to the company's real official website when one is on file in
