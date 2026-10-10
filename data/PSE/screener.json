@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-10T10:06:23.154212Z",
+  "generated": "2026-10-10T11:27:11.862151Z",
   "asOfDate": "2026-10-09",
   "universeSize": 120,
   "methodology": "Ranks the 120 most liquid PSE tickers that traded on the latest session (2026-10-09) (top 50% by 21-trading-day average peso value traded) by closing-price % change over each lookback window. A ticker is skipped for a window if its nearest prior trade is too stale to represent that window meaningfully.",
