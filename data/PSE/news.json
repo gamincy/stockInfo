@@ -1,10 +1,10 @@
 {
-  "generated": "2026-10-10T10:42:19Z",
+  "generated": "2026-10-12T12:01:58Z",
   "note": "Compiled via web search, not a live feed. Refresh by asking Claude to look up news again for the current screener picks. The newsUrl for each company is a live, continuously-updating source you can open for anything more recent than the note below.",
   "companies": {
     "ABG": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-ABG/news/",
-      "note": null
+      "note": "Shareholders approved on Aug 11, 2026 a recapitalization raising authorized capital to up to ₱3B, private placements/a follow-on offering, and share-swap acquisitions of Industry Movers Corp. and Kabalayan Housing assets valued at ₱4.7B–₱6.7B."
     },
     "ACR": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-ACR/news/",
@@ -72,7 +72,7 @@
     },
     "PHR": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-PHR/news/",
-      "note": "Received a US$42.5M funding advance from Emerald Development Holdings and secured PSE board approval for a follow-on share offering in 2026, alongside continued construction of its Emerald Bay resort in Mactan."
+      "note": "Closed Donatela Resort in Bohol on Sep 30, 2026 and turned it over to Land Bank after foreclosure; plans to transfer PH Travel and Leisure to parent Udenna, aiming to reverse a ₱5.95B equity deficit (as of Jun 30) within two years."
     },
     "APX": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-APX/news/",
@@ -84,7 +84,7 @@
     },
     "FCG": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-FCG/news/",
-      "note": "Board approved a voluntary delisting on Oct 7, 2026: tender offer at ₱0.82/share, shareholder vote set for Nov 13."
+      "note": "Board approved a voluntary delisting on Oct 7, 2026 via a ₱0.82/share tender offer by affiliate Figaro Coffee Systems (financed by a Chinabank loan); shareholder vote set for Nov 13, 2026."
     },
     "FGEN": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-FGEN/news/",
@@ -109,6 +109,14 @@
     "SGP": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-SGP/news/",
       "note": "Maharlika's ₱19.7B deal for a 20% stake, signed in Jan 2025 and targeted to close in H1 2026, was reported delayed in mid-Aug 2026 and may close before year-end; shares fell in late June after ERC Resolution No. 18 opened transmission to non-NGCP firms."
+    },
+    "CEBCP": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-CEBCP/news/",
+      "note": "Cumulative convertible preferred shares of Cebu Air (CEB), set for mandatory 1:1 conversion into common shares in 2027; the issuer swung to an H1 2026 net loss of ₱5.87B on fuel costs and FX losses (disclosed Aug 6, 2026)."
+    },
+    "COL": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-COL/news/",
+      "note": "H1 2026 net income rose 2.55% to ₱261.63M as revenues grew 5.43% to ₱592.72M on 21% higher commissions; customer accounts reached 574,297 (17-Q filed Aug 14, 2026)."
     }
   }
 }
