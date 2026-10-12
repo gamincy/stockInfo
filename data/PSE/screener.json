@@ -1,61 +1,61 @@
 {
-  "generated": "2026-10-10T11:27:11.862151Z",
-  "asOfDate": "2026-10-09",
-  "universeSize": 120,
-  "methodology": "Ranks the 120 most liquid PSE tickers that traded on the latest session (2026-10-09) (top 50% by 21-trading-day average peso value traded) by closing-price % change over each lookback window. A ticker is skipped for a window if its nearest prior trade is too stale to represent that window meaningfully.",
+  "generated": "2026-10-12T07:07:00.961435Z",
+  "asOfDate": "2026-10-12",
+  "universeSize": 123,
+  "methodology": "Ranks the 123 most liquid PSE tickers that traded on the latest session (2026-10-12) (top 50% by 21-trading-day average peso value traded) by closing-price % change over each lookback window. A ticker is skipped for a window if its nearest prior trade is too stale to represent that window meaningfully.",
   "periods": {
     "daily": {
       "label": "Daily",
       "picks": [
         {
+          "symbol": "LBC",
+          "pctChange": 14.23,
+          "startDate": "2026-10-09",
+          "startPrice": 10.68,
+          "endDate": "2026-10-12",
+          "endPrice": 12.2,
+          "avgDailyValue": 1045570,
+          "reason": "Gained 14.23% from ₱10.68 (2026-10-09) to ₱12.20 (2026-10-12), average daily turnover ₱1,045,570 — the top daily mover among liquid, active PSE names over this window."
+        },
+        {
+          "symbol": "PHR",
+          "pctChange": 9.86,
+          "startDate": "2026-10-09",
+          "startPrice": 0.213,
+          "endDate": "2026-10-12",
+          "endPrice": 0.234,
+          "avgDailyValue": 4232283,
+          "reason": "Gained 9.86% from ₱0.21 (2026-10-09) to ₱0.23 (2026-10-12), average daily turnover ₱4,232,283 — the top daily mover among liquid, active PSE names over this window."
+        },
+        {
           "symbol": "TUGS",
-          "pctChange": 15.5,
-          "startDate": "2026-10-08",
-          "startPrice": 1.29,
-          "endDate": "2026-10-09",
-          "endPrice": 1.49,
-          "avgDailyValue": 4270243,
-          "reason": "Gained 15.50% from ₱1.29 (2026-10-08) to ₱1.49 (2026-10-09), average daily turnover ₱4,270,243 — the top daily mover among liquid, active PSE names over this window."
+          "pctChange": 7.38,
+          "startDate": "2026-10-09",
+          "startPrice": 1.49,
+          "endDate": "2026-10-12",
+          "endPrice": 1.6,
+          "avgDailyValue": 4371165,
+          "reason": "Gained 7.38% from ₱1.49 (2026-10-09) to ₱1.60 (2026-10-12), average daily turnover ₱4,371,165 — the top daily mover among liquid, active PSE names over this window."
         },
         {
-          "symbol": "FCG",
-          "pctChange": 14.93,
-          "startDate": "2026-10-07",
-          "startPrice": 0.67,
-          "endDate": "2026-10-09",
-          "endPrice": 0.77,
-          "avgDailyValue": 4313241,
-          "reason": "Gained 14.93% from ₱0.67 (2026-10-07) to ₱0.77 (2026-10-09), average daily turnover ₱4,313,241 — the top daily mover among liquid, active PSE names over this window."
+          "symbol": "ABG",
+          "pctChange": 6.53,
+          "startDate": "2026-10-09",
+          "startPrice": 23.75,
+          "endDate": "2026-10-12",
+          "endPrice": 25.3,
+          "avgDailyValue": 31683776,
+          "reason": "Gained 6.53% from ₱23.75 (2026-10-09) to ₱25.30 (2026-10-12), average daily turnover ₱31,683,776 — the top daily mover among liquid, active PSE names over this window."
         },
         {
-          "symbol": "PLUS",
-          "pctChange": 12.47,
-          "startDate": "2026-10-08",
-          "startPrice": 7.3,
-          "endDate": "2026-10-09",
-          "endPrice": 8.21,
-          "avgDailyValue": 33721329,
-          "reason": "Gained 12.47% from ₱7.30 (2026-10-08) to ₱8.21 (2026-10-09), average daily turnover ₱33,721,329 — the top daily mover among liquid, active PSE names over this window."
-        },
-        {
-          "symbol": "APX",
-          "pctChange": 7.72,
-          "startDate": "2026-10-08",
-          "startPrice": 16.32,
-          "endDate": "2026-10-09",
-          "endPrice": 17.58,
-          "avgDailyValue": 124969139,
-          "reason": "Gained 7.72% from ₱16.32 (2026-10-08) to ₱17.58 (2026-10-09), average daily turnover ₱124,969,139 — the top daily mover among liquid, active PSE names over this window."
-        },
-        {
-          "symbol": "OPM",
-          "pctChange": 7.14,
-          "startDate": "2026-10-08",
-          "startPrice": 0.014,
-          "endDate": "2026-10-09",
-          "endPrice": 0.015,
-          "avgDailyValue": 1477705,
-          "reason": "Gained 7.14% from ₱0.01 (2026-10-08) to ₱0.01 (2026-10-09), average daily turnover ₱1,477,705 — the top daily mover among liquid, active PSE names over this window."
+          "symbol": "TECH",
+          "pctChange": 5.36,
+          "startDate": "2026-10-09",
+          "startPrice": 1.12,
+          "endDate": "2026-10-12",
+          "endPrice": 1.18,
+          "avgDailyValue": 11621788,
+          "reason": "Gained 5.36% from ₱1.12 (2026-10-09) to ₱1.18 (2026-10-12), average daily turnover ₱11,621,788 — the top daily mover among liquid, active PSE names over this window."
         }
       ]
     },
@@ -63,54 +63,54 @@
       "label": "Weekly",
       "picks": [
         {
-          "symbol": "FCG",
-          "pctChange": 22.22,
-          "startDate": "2026-10-02",
-          "startPrice": 0.63,
-          "endDate": "2026-10-09",
-          "endPrice": 0.77,
-          "avgDailyValue": 4313241,
-          "reason": "Gained 22.22% from ₱0.63 (2026-10-02) to ₱0.77 (2026-10-09), average daily turnover ₱4,313,241 — the top weekly mover among liquid, active PSE names over this window."
+          "symbol": "LBC",
+          "pctChange": 47.34,
+          "startDate": "2026-10-05",
+          "startPrice": 8.28,
+          "endDate": "2026-10-12",
+          "endPrice": 12.2,
+          "avgDailyValue": 1045570,
+          "reason": "Gained 47.34% from ₱8.28 (2026-10-05) to ₱12.20 (2026-10-12), average daily turnover ₱1,045,570 — the top weekly mover among liquid, active PSE names over this window."
         },
         {
           "symbol": "PHR",
-          "pctChange": 20.34,
-          "startDate": "2026-10-02",
-          "startPrice": 0.177,
-          "endDate": "2026-10-09",
-          "endPrice": 0.213,
-          "avgDailyValue": 4774168,
-          "reason": "Gained 20.34% from ₱0.18 (2026-10-02) to ₱0.21 (2026-10-09), average daily turnover ₱4,774,168 — the top weekly mover among liquid, active PSE names over this window."
+          "pctChange": 32.95,
+          "startDate": "2026-10-05",
+          "startPrice": 0.176,
+          "endDate": "2026-10-12",
+          "endPrice": 0.234,
+          "avgDailyValue": 4232283,
+          "reason": "Gained 32.95% from ₱0.18 (2026-10-05) to ₱0.23 (2026-10-12), average daily turnover ₱4,232,283 — the top weekly mover among liquid, active PSE names over this window."
         },
         {
-          "symbol": "CEB",
-          "pctChange": 17.47,
-          "startDate": "2026-10-02",
-          "startPrice": 19.58,
-          "endDate": "2026-10-09",
-          "endPrice": 23.0,
-          "avgDailyValue": 16551195,
-          "reason": "Gained 17.47% from ₱19.58 (2026-10-02) to ₱23.00 (2026-10-09), average daily turnover ₱16,551,195 — the top weekly mover among liquid, active PSE names over this window."
+          "symbol": "FCG",
+          "pctChange": 16.67,
+          "startDate": "2026-10-05",
+          "startPrice": 0.66,
+          "endDate": "2026-10-12",
+          "endPrice": 0.77,
+          "avgDailyValue": 6670927,
+          "reason": "Gained 16.67% from ₱0.66 (2026-10-05) to ₱0.77 (2026-10-12), average daily turnover ₱6,670,927 — the top weekly mover among liquid, active PSE names over this window."
         },
         {
-          "symbol": "FGEN",
-          "pctChange": 14.37,
-          "startDate": "2026-10-02",
-          "startPrice": 17.88,
-          "endDate": "2026-10-09",
-          "endPrice": 20.45,
-          "avgDailyValue": 43296864,
-          "reason": "Gained 14.37% from ₱17.88 (2026-10-02) to ₱20.45 (2026-10-09), average daily turnover ₱43,296,864 — the top weekly mover among liquid, active PSE names over this window."
+          "symbol": "TUGS",
+          "pctChange": 14.29,
+          "startDate": "2026-10-05",
+          "startPrice": 1.4,
+          "endDate": "2026-10-12",
+          "endPrice": 1.6,
+          "avgDailyValue": 4371165,
+          "reason": "Gained 14.29% from ₱1.40 (2026-10-05) to ₱1.60 (2026-10-12), average daily turnover ₱4,371,165 — the top weekly mover among liquid, active PSE names over this window."
         },
         {
-          "symbol": "SGP",
-          "pctChange": 9.52,
-          "startDate": "2026-10-02",
-          "startPrice": 21.0,
-          "endDate": "2026-10-09",
-          "endPrice": 23.0,
-          "avgDailyValue": 34477524,
-          "reason": "Gained 9.52% from ₱21.00 (2026-10-02) to ₱23.00 (2026-10-09), average daily turnover ₱34,477,524 — the top weekly mover among liquid, active PSE names over this window."
+          "symbol": "CEBCP",
+          "pctChange": 13.21,
+          "startDate": "2026-10-05",
+          "startPrice": 26.5,
+          "endDate": "2026-10-12",
+          "endPrice": 30.0,
+          "avgDailyValue": 1038938,
+          "reason": "Gained 13.21% from ₱26.50 (2026-10-05) to ₱30.00 (2026-10-12), average daily turnover ₱1,038,938 — the top weekly mover among liquid, active PSE names over this window."
         }
       ]
     },
@@ -118,54 +118,54 @@
       "label": "Monthly",
       "picks": [
         {
-          "symbol": "FOOD",
-          "pctChange": 53.57,
-          "startDate": "2026-09-09",
-          "startPrice": 0.28,
-          "endDate": "2026-10-09",
-          "endPrice": 0.43,
-          "avgDailyValue": 966666,
-          "reason": "Gained 53.57% from ₱0.28 (2026-09-09) to ₱0.43 (2026-10-09), average daily turnover ₱966,666 — the top monthly mover among liquid, active PSE names over this window."
+          "symbol": "LBC",
+          "pctChange": 51.93,
+          "startDate": "2026-09-11",
+          "startPrice": 8.03,
+          "endDate": "2026-10-12",
+          "endPrice": 12.2,
+          "avgDailyValue": 1045570,
+          "reason": "Gained 51.93% from ₱8.03 (2026-09-11) to ₱12.20 (2026-10-12), average daily turnover ₱1,045,570 — the top monthly mover among liquid, active PSE names over this window."
         },
         {
-          "symbol": "LBC",
-          "pctChange": 37.63,
-          "startDate": "2026-09-09",
-          "startPrice": 7.76,
-          "endDate": "2026-10-09",
-          "endPrice": 10.68,
-          "avgDailyValue": 1032173,
-          "reason": "Gained 37.63% from ₱7.76 (2026-09-09) to ₱10.68 (2026-10-09), average daily turnover ₱1,032,173 — the top monthly mover among liquid, active PSE names over this window."
+          "symbol": "PHR",
+          "pctChange": 47.17,
+          "startDate": "2026-09-11",
+          "startPrice": 0.159,
+          "endDate": "2026-10-12",
+          "endPrice": 0.234,
+          "avgDailyValue": 4232283,
+          "reason": "Gained 47.17% from ₱0.16 (2026-09-11) to ₱0.23 (2026-10-12), average daily turnover ₱4,232,283 — the top monthly mover among liquid, active PSE names over this window."
         },
         {
           "symbol": "FCG",
-          "pctChange": 28.33,
-          "startDate": "2026-09-09",
-          "startPrice": 0.6,
-          "endDate": "2026-10-09",
+          "pctChange": 26.23,
+          "startDate": "2026-09-11",
+          "startPrice": 0.61,
+          "endDate": "2026-10-12",
           "endPrice": 0.77,
-          "avgDailyValue": 4313241,
-          "reason": "Gained 28.33% from ₱0.60 (2026-09-09) to ₱0.77 (2026-10-09), average daily turnover ₱4,313,241 — the top monthly mover among liquid, active PSE names over this window."
+          "avgDailyValue": 6670927,
+          "reason": "Gained 26.23% from ₱0.61 (2026-09-11) to ₱0.77 (2026-10-12), average daily turnover ₱6,670,927 — the top monthly mover among liquid, active PSE names over this window."
         },
         {
           "symbol": "PAL",
-          "pctChange": 19.54,
-          "startDate": "2026-09-09",
-          "startPrice": 3.02,
-          "endDate": "2026-10-09",
-          "endPrice": 3.61,
-          "avgDailyValue": 9376429,
-          "reason": "Gained 19.54% from ₱3.02 (2026-09-09) to ₱3.61 (2026-10-09), average daily turnover ₱9,376,429 — the top monthly mover among liquid, active PSE names over this window."
+          "pctChange": 15.16,
+          "startDate": "2026-09-11",
+          "startPrice": 3.1,
+          "endDate": "2026-10-12",
+          "endPrice": 3.57,
+          "avgDailyValue": 9137277,
+          "reason": "Gained 15.16% from ₱3.10 (2026-09-11) to ₱3.57 (2026-10-12), average daily turnover ₱9,137,277 — the top monthly mover among liquid, active PSE names over this window."
         },
         {
-          "symbol": "PERC",
-          "pctChange": 11.14,
-          "startDate": "2026-09-09",
-          "startPrice": 4.4,
-          "endDate": "2026-10-09",
-          "endPrice": 4.89,
-          "avgDailyValue": 2290303,
-          "reason": "Gained 11.14% from ₱4.40 (2026-09-09) to ₱4.89 (2026-10-09), average daily turnover ₱2,290,303 — the top monthly mover among liquid, active PSE names over this window."
+          "symbol": "COL",
+          "pctChange": 13.67,
+          "startDate": "2026-09-11",
+          "startPrice": 1.39,
+          "endDate": "2026-10-12",
+          "endPrice": 1.58,
+          "avgDailyValue": 3337457,
+          "reason": "Gained 13.67% from ₱1.39 (2026-09-11) to ₱1.58 (2026-10-12), average daily turnover ₱3,337,457 — the top monthly mover among liquid, active PSE names over this window."
         }
       ]
     },
@@ -173,54 +173,54 @@
       "label": "Quarterly",
       "picks": [
         {
-          "symbol": "ION",
-          "pctChange": 118.31,
-          "startDate": "2026-07-10",
-          "startPrice": 1.42,
-          "endDate": "2026-10-09",
-          "endPrice": 3.1,
-          "avgDailyValue": 22106975,
-          "reason": "Gained 118.31% from ₱1.42 (2026-07-10) to ₱3.10 (2026-10-09), average daily turnover ₱22,106,975 — the top quarterly mover among liquid, active PSE names over this window."
-        },
-        {
           "symbol": "AT",
-          "pctChange": 117.11,
-          "startDate": "2026-07-10",
-          "startPrice": 8.3,
-          "endDate": "2026-10-09",
-          "endPrice": 18.02,
-          "avgDailyValue": 100183055,
-          "reason": "Gained 117.11% from ₱8.30 (2026-07-10) to ₱18.02 (2026-10-09), average daily turnover ₱100,183,055 — the top quarterly mover among liquid, active PSE names over this window."
+          "pctChange": 128.96,
+          "startDate": "2026-07-13",
+          "startPrice": 8.08,
+          "endDate": "2026-10-12",
+          "endPrice": 18.5,
+          "avgDailyValue": 92108500,
+          "reason": "Gained 128.96% from ₱8.08 (2026-07-13) to ₱18.50 (2026-10-12), average daily turnover ₱92,108,500 — the top quarterly mover among liquid, active PSE names over this window."
         },
         {
-          "symbol": "FOOD",
-          "pctChange": 62.26,
-          "startDate": "2026-07-10",
-          "startPrice": 0.265,
-          "endDate": "2026-10-09",
-          "endPrice": 0.43,
-          "avgDailyValue": 966666,
-          "reason": "Gained 62.26% from ₱0.27 (2026-07-10) to ₱0.43 (2026-10-09), average daily turnover ₱966,666 — the top quarterly mover among liquid, active PSE names over this window."
-        },
-        {
-          "symbol": "V",
-          "pctChange": 55.42,
-          "startDate": "2026-07-10",
-          "startPrice": 0.83,
-          "endDate": "2026-10-09",
-          "endPrice": 1.29,
-          "avgDailyValue": 2771664,
-          "reason": "Gained 55.42% from ₱0.83 (2026-07-10) to ₱1.29 (2026-10-09), average daily turnover ₱2,771,664 — the top quarterly mover among liquid, active PSE names over this window."
+          "symbol": "ION",
+          "pctChange": 117.48,
+          "startDate": "2026-07-13",
+          "startPrice": 1.43,
+          "endDate": "2026-10-12",
+          "endPrice": 3.11,
+          "avgDailyValue": 22332923,
+          "reason": "Gained 117.48% from ₱1.43 (2026-07-13) to ₱3.11 (2026-10-12), average daily turnover ₱22,332,923 — the top quarterly mover among liquid, active PSE names over this window."
         },
         {
           "symbol": "LBC",
-          "pctChange": 54.78,
-          "startDate": "2026-07-09",
-          "startPrice": 6.9,
-          "endDate": "2026-10-09",
-          "endPrice": 10.68,
-          "avgDailyValue": 1032173,
-          "reason": "Gained 54.78% from ₱6.90 (2026-07-09) to ₱10.68 (2026-10-09), average daily turnover ₱1,032,173 — the top quarterly mover among liquid, active PSE names over this window."
+          "pctChange": 79.68,
+          "startDate": "2026-07-13",
+          "startPrice": 6.79,
+          "endDate": "2026-10-12",
+          "endPrice": 12.2,
+          "avgDailyValue": 1045570,
+          "reason": "Gained 79.68% from ₱6.79 (2026-07-13) to ₱12.20 (2026-10-12), average daily turnover ₱1,045,570 — the top quarterly mover among liquid, active PSE names over this window."
+        },
+        {
+          "symbol": "V",
+          "pctChange": 65.38,
+          "startDate": "2026-07-13",
+          "startPrice": 0.78,
+          "endDate": "2026-10-12",
+          "endPrice": 1.29,
+          "avgDailyValue": 2499498,
+          "reason": "Gained 65.38% from ₱0.78 (2026-07-13) to ₱1.29 (2026-10-12), average daily turnover ₱2,499,498 — the top quarterly mover among liquid, active PSE names over this window."
+        },
+        {
+          "symbol": "ACR",
+          "pctChange": 59.38,
+          "startDate": "2026-07-13",
+          "startPrice": 0.64,
+          "endDate": "2026-10-12",
+          "endPrice": 1.02,
+          "avgDailyValue": 7704008,
+          "reason": "Gained 59.38% from ₱0.64 (2026-07-13) to ₱1.02 (2026-10-12), average daily turnover ₱7,704,008 — the top quarterly mover among liquid, active PSE names over this window."
         }
       ]
     }
