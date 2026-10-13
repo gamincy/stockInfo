@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-12T12:01:58Z",
+  "generated": "2026-10-13T12:01:33Z",
   "note": "Compiled via web search, not a live feed. Refresh by asking Claude to look up news again for the current screener picks. The newsUrl for each company is a live, continuously-updating source you can open for anything more recent than the note below.",
   "companies": {
     "ABG": {
@@ -56,7 +56,7 @@
     },
     "PX": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-PX/news/",
-      "note": "Paid a ₱0.04/share dividend on March 25, 2026; average 1-year analyst price target was recently revised to about ₱19."
+      "note": "H1 2026 net loss of ₱200.4M vs ₱301.4M profit on forex losses on dollar loans, though core income rose 56% to ₱212M after a ₱392M Q2 profit; Silangan commissioning targeted for Q4 2026 (reported late Jul 2026)."
     },
     "CNVRG": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-CNVRG/news/",
@@ -92,7 +92,7 @@
     },
     "FOOD": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-FOOD/news/",
-      "note": "Q1 2026 revenue fell 55% to US$8.93M with a US$2.6M net loss after an extended plant shutdown; named Kirby J. Rasos general manager effective July 1, 2026."
+      "note": "H1 2026 net revenue fell to US$22.8M from US$35.6M a year earlier (reported Aug 12, 2026); Kirby J. Rasos became general manager July 1 after CEO Jeoffrey Yulo resigned effective June 30, 2026."
     },
     "LBC": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-LBC/news/",
@@ -117,6 +117,18 @@
     "COL": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-COL/news/",
       "note": "H1 2026 net income rose 2.55% to ₱261.63M as revenues grew 5.43% to ₱592.72M on 21% higher commissions; customer accounts reached 574,297 (17-Q filed Aug 14, 2026)."
+    },
+    "JGS": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-JGS/news/",
+      "note": "H1 2026 net income fell 29% to ₱10.7B and core net income dropped 37% to ₱13B as Cebu Pacific's fuel-driven loss offset gains from Meralco and Singapore Land; revenue rose 7% (reported Aug 12, 2026)."
+    },
+    "SHNG": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-SHNG/news/",
+      "note": "H1 2026 net income rose 6% to ₱2.2B as revenue grew 11% to ₱5.9B, led by a 38% jump in condominium revenue to ₱1.72B (filed Aug 4, 2026)."
+    },
+    "TEL": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-TEL/news/",
+      "note": "H1 2026 attributable net income fell 6% to ₱16.45B and telco core income slipped 2% to ₱16.6B on higher depreciation and FX losses; declared a ₱46/share interim dividend (reported Aug 2026)."
     }
   }
 }
