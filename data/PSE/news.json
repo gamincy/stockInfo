@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-13T12:01:33Z",
+  "generated": "2026-10-14T12:02:04Z",
   "note": "Compiled via web search, not a live feed. Refresh by asking Claude to look up news again for the current screener picks. The newsUrl for each company is a live, continuously-updating source you can open for anything more recent than the note below.",
   "companies": {
     "ABG": {
@@ -129,6 +129,18 @@
     "TEL": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-TEL/news/",
       "note": "H1 2026 attributable net income fell 6% to ₱16.45B and telco core income slipped 2% to ₱16.6B on higher depreciation and FX losses; declared a ₱46/share interim dividend (reported Aug 2026)."
+    },
+    "AC": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-AC/news/",
+      "note": "Signed a ~₱44.5B deal on Sep 21, 2026 for Mitsubishi Corp. to raise its economic stake from 4.7% to 15% (20% voting) via new shares and a ₱650/share tender offer for up to ~30M shares; Ayala keeps ~₱20B in net proceeds."
+    },
+    "CHP": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-CHP/news/",
+      "note": "H1 2026 net loss narrowed 83% to ₱207M from ₱1.23B, with the Q2 loss cut to ₱4M from ₱682M on higher cement volumes and prices (per parent DMCI, Aug 7, 2026); unit Solid Cement secured a ₱5B BDO term loan in April 2026."
+    },
+    "GTCAP": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-GTCAP/news/",
+      "note": "H1 2026 consolidated net income fell 11% to ₱16.41B from ₱18.42B as Toyota Motor Philippines' profit dropped 33% to ₱8.4B on weaker car demand, while Metrobank's ₱24.9B net income was flat (reported Aug 13, 2026)."
     }
   }
 }
