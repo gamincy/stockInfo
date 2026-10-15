@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-14T12:02:04Z",
+  "generated": "2026-10-15T12:02:54Z",
   "note": "Compiled via web search, not a live feed. Refresh by asking Claude to look up news again for the current screener picks. The newsUrl for each company is a live, continuously-updating source you can open for anything more recent than the note below.",
   "companies": {
     "ABG": {
@@ -12,7 +12,7 @@
     },
     "AT": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-AT/news/",
-      "note": "Sy-led Dominion Holdings agreed on Aug 7, 2026 to buy Anglo Philippine's subscription rights to 727.2M Atlas shares (~20.4%) for ₱857M, lifting the Sy family to 54.48%; SM Investments plans to move its ~34% stake to Dominion by 2027."
+      "note": "Swung to a ₱3.97B Q2 2026 net income from a ₱249.6M loss a year earlier on higher copper and gold prices (reported Aug 18, 2026); Sy-led Dominion Holdings agreed Aug 7 to buy a ~20.4% stake from Anglo Philippine for ₱857M."
     },
     "CNPF": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-CNPF/news/",
@@ -92,7 +92,7 @@
     },
     "FOOD": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-FOOD/news/",
-      "note": "H1 2026 net revenue fell to US$22.8M from US$35.6M a year earlier (reported Aug 12, 2026); Kirby J. Rasos became general manager July 1 after CEO Jeoffrey Yulo resigned effective June 30, 2026."
+      "note": "Board approved on Sep 2, 2026 an equity restructuring to wipe out about US$21.3M (~₱1.33B) of accumulated deficit, paving the way for a ₱660M capital infusion from parent Strongoak, subject to stockholder and regulatory approval; H1 2026 revenue fell to US$22.8M."
     },
     "LBC": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-LBC/news/",
@@ -141,6 +141,18 @@
     "GTCAP": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-GTCAP/news/",
       "note": "H1 2026 consolidated net income fell 11% to ₱16.41B from ₱18.42B as Toyota Motor Philippines' profit dropped 33% to ₱8.4B on weaker car demand, while Metrobank's ₱24.9B net income was flat (reported Aug 13, 2026)."
+    },
+    "LODE": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-LODE/news/",
+      "note": "Investment holding company with no commercial operations; posted a Q1 2026 net loss of about ₱0.30M vs ₱0.46M a year earlier, and its auditor raised a going-concern doubt in April 2026."
+    },
+    "RCI": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-RCI/news/",
+      "note": "Board approved on Aug 12, 2026 authority to sell a 278.3-hectare property in Nasugbu, Batangas; signed an omnibus loan and security agreement with China Banking Corp. on Aug 23 and declared a cash dividend payable Oct 12, 2026."
+    },
+    "SMPH": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-SMPH/news/",
+      "note": "H1 2026 net income was flat at ₱24.5B as revenue rose 5% to ₱71.7B, led by an 8% gain in mall revenue to ₱41.8B, offset by higher costs (reported Aug 10, 2026); flagship SM Nuvali mall slated to open in Q4 2026."
     }
   }
 }
