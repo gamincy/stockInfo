@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-15T12:02:54Z",
+  "generated": "2026-10-16T12:02:11Z",
   "note": "Compiled via web search, not a live feed. Refresh by asking Claude to look up news again for the current screener picks. The newsUrl for each company is a live, continuously-updating source you can open for anything more recent than the note below.",
   "companies": {
     "ABG": {
@@ -153,6 +153,18 @@
     "SMPH": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-SMPH/news/",
       "note": "H1 2026 net income was flat at ₱24.5B as revenue rose 5% to ₱71.7B, led by an 8% gain in mall revenue to ₱41.8B, offset by higher costs (reported Aug 10, 2026); flagship SM Nuvali mall slated to open in Q4 2026."
+    },
+    "OV": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-OV/news/",
+      "note": null
+    },
+    "RCR": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-RCR/news/",
+      "note": "H1 2026 net income excluding fair-value changes rose 44% to ₱4.95B on revenue up 50% to ₱6.9B, with zero debt (reported Aug 11, 2026); income from six Robinsons malls (~₱10.62B) acquired via a property-for-share swap accrues from Jul 1."
+    },
+    "TUBIG": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-TUBIG/news/",
+      "note": "Shares resumed trading on Oct 15, 2026 after a nearly 10-month suspension following the ₱6.6B backdoor listing of its water business into the former Coal Asia Holdings; plans a ₱1.8B follow-on offering as early as January to meet minimum public float."
     }
   }
 }
