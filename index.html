@@ -82,7 +82,7 @@
   <div class="card" id="holdings-card" hidden>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Symbol</th><th>Shares</th><th>Avg Price</th><th>Current</th><th>Market Value</th><th>Gain/Loss</th></tr></thead>
+        <thead><tr><th>Symbol</th><th>Shares</th><th>Avg Price</th><th>Current</th><th>Market Value</th><th>Gain/Loss</th><th>Day G/L</th></tr></thead>
         <tbody id="holdings-body"></tbody>
       </table>
     </div>
@@ -189,29 +189,55 @@
           'Last updated ' + (isNaN(d) ? acct.lastUpdated : d.toLocaleString());
       }
       if (Array.isArray(acct.holdings) && acct.holdings.length) {
-        const body = document.getElementById('holdings-body');
-        body.innerHTML = acct.holdings.map(h => {
-          // Prefer the broker's own figures (net of selling fees) when present.
-          const mv = h.marketValue ?? (h.shares || 0) * (h.currentPrice || 0);
-          const cost = (h.shares || 0) * (h.avgPrice || 0);
-          const gl = h.gainLoss ?? mv - cost;
-          const cls = gl > 0 ? 'up' : (gl < 0 ? 'down' : '');
-          return `<tr class="holding-row">
-            <td style="text-align:left">${h.symbol}</td>
-            <td>${fmt(h.shares || 0)}</td>
-            <td>${fmt(h.avgPrice || 0)}</td>
-            <td>${fmt(h.currentPrice || 0)}</td>
-            <td>${money(mv)}</td>
-            <td class="${cls}">${gl >= 0 ? '+' : ''}${money(gl)}</td>
-          </tr>`;
-        }).join('');
-        document.getElementById('holdings-card').hidden = false;
+        // Previous close per symbol comes from that day's PSE file (column 2).
+        const acctDate = String(acct.lastUpdated || '').slice(0, 10);
+        return fetch(`data/PSE/csv/Data_${acctDate}.txt`, {cache: 'no-store'})
+          .then(r => r.ok ? r.text() : '')
+          .catch(() => '')
+          .then(text => {
+            const prevClose = {};
+            text.split('\n').forEach(line => {
+              const cols = line.split(':');
+              if (cols.length >= 11) prevClose[cols[0]] = parseNum(cols[1]);
+            });
+            renderHoldings(acct.holdings, prevClose);
+          });
       }
     })
     .catch(err => {
       document.getElementById('summary-updated').innerHTML =
         `<span class="error">Could not load account-details.json (${err.message}).</span>`;
     });
+
+  function renderHoldings(holdings, prevClose){
+    const body = document.getElementById('holdings-body');
+    body.innerHTML = holdings.map(h => {
+      // Prefer the broker's own figures (net of selling fees) when present.
+      const mv = h.marketValue ?? (h.shares || 0) * (h.currentPrice || 0);
+      const cost = (h.shares || 0) * (h.avgPrice || 0);
+      const gl = h.gainLoss ?? mv - cost;
+      const cls = gl > 0 ? 'up' : (gl < 0 ? 'down' : '');
+      const pc = prevClose[h.symbol];
+      let dayCell = '<td class="muted">&mdash;</td>';
+      if (pc > 0 && h.currentPrice) {
+        const dgl = (h.shares || 0) * (h.currentPrice - pc);
+        const dpct = (h.currentPrice / pc - 1) * 100;
+        const dcls = dgl > 0 ? 'up' : (dgl < 0 ? 'down' : '');
+        const sign = dgl >= 0 ? '+' : '';
+        dayCell = `<td class="${dcls}">${sign}${money(dgl)} (${sign}${fmt(dpct)}%)</td>`;
+      }
+      return `<tr class="holding-row">
+        <td style="text-align:left">${h.symbol}</td>
+        <td>${fmt(h.shares || 0)}</td>
+        <td>${fmt(h.avgPrice || 0)}</td>
+        <td>${fmt(h.currentPrice || 0)}</td>
+        <td>${money(mv)}</td>
+        <td class="${cls}">${gl >= 0 ? '+' : ''}${money(gl)}</td>
+        ${dayCell}
+      </tr>`;
+    }).join('');
+    document.getElementById('holdings-card').hidden = false;
+  }
 
   // --- PSE daily data: most active / winners / losers ---
   const dateSelect = document.getElementById('date-select');
