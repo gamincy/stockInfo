@@ -70,23 +70,7 @@
   <h1>My PSE Portfolio</h1>
 
   <h2>Account Summary</h2>
-  <div class="card">
-    <div class="stats" id="summary-stats">
-      <div class="stat"><div class="label">Buying Power</div><div class="value">&mdash;</div></div>
-      <div class="stat"><div class="label">Total Portfolio Value</div><div class="value">&mdash;</div></div>
-      <div class="stat"><div class="label">Current Stocks Value</div><div class="value">&mdash;</div></div>
-    </div>
-    <div class="updated" id="summary-updated"></div>
-  </div>
-
-  <div class="card" id="holdings-card" hidden>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Symbol</th><th>Shares</th><th>Avg Price</th><th>Current</th><th>Market Value</th><th>Gain/Loss</th><th>Day G/L</th></tr></thead>
-        <tbody id="holdings-body"></tbody>
-      </table>
-    </div>
-  </div>
+  <div id="accounts"></div>
 
   <h2>Momentum Screener</h2>
   <div class="card">
@@ -173,45 +157,87 @@
     .then(data => { companyWebsites = data || {}; })
     .catch(() => { /* About links still work via the stockanalysis.com fallback */ });
 
-  // --- Account summary ---
-  fetch('accounts/PSE/account-details.json', {cache: 'no-store'})
-    .then(r => r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status)))
-    .then(acct => {
-      const statsEl = document.getElementById('summary-stats');
-      statsEl.innerHTML = `
-        <div class="stat"><div class="label">Buying Power</div><div class="value">${money(acct.buyingPower || 0)}</div></div>
-        <div class="stat"><div class="label">Total Portfolio Value</div><div class="value">${money(acct.totalPortfolioValue || 0)}</div></div>
-        <div class="stat"><div class="label">Current Stocks Value</div><div class="value">${money(acct.currentStocksValue || 0)}</div></div>
-      `;
-      if (acct.lastUpdated) {
-        const d = new Date(acct.lastUpdated);
-        document.getElementById('summary-updated').textContent =
-          'Last updated ' + (isNaN(d) ? acct.lastUpdated : d.toLocaleString());
-      }
-      if (Array.isArray(acct.holdings) && acct.holdings.length) {
-        // Previous close per symbol comes from that day's PSE file (column 2).
-        const acctDate = String(acct.lastUpdated || '').slice(0, 10);
-        return fetch(`data/PSE/csv/Data_${acctDate}.txt`, {cache: 'no-store'})
-          .then(r => r.ok ? r.text() : '')
-          .catch(() => '')
-          .then(text => {
-            const prevClose = {};
-            text.split('\n').forEach(line => {
-              const cols = line.split(':');
-              if (cols.length >= 11) prevClose[cols[0]] = parseNum(cols[1]);
-            });
-            renderHoldings(acct.holdings, prevClose);
-          });
-      }
-    })
-    .catch(err => {
-      document.getElementById('summary-updated').innerHTML =
-        `<span class="error">Could not load account-details.json (${err.message}).</span>`;
-    });
+  // --- Account summary (one block per COL account) ---
+  const ACCOUNTS = [
+    {name: 'Mins', file: 'accounts/PSE/account-details.json'},
+    {name: 'Gams', file: 'accounts/PSE/account-details-gams.json'},
+  ];
+  const accountsEl = document.getElementById('accounts');
+  const prevCloseByDate = {};
 
-  function renderHoldings(holdings, prevClose){
-    const body = document.getElementById('holdings-body');
-    body.innerHTML = holdings.map(h => {
+  // Previous close per symbol comes from that day's PSE file (column 2).
+  function loadPrevClose(date){
+    if (!prevCloseByDate[date]) {
+      prevCloseByDate[date] = fetch(`data/PSE/csv/Data_${date}.txt`, {cache: 'no-store'})
+        .then(r => r.ok ? r.text() : '')
+        .catch(() => '')
+        .then(text => {
+          const prevClose = {};
+          text.split('\n').forEach(line => {
+            const cols = line.split(':');
+            if (cols.length >= 11) prevClose[cols[0]] = parseNum(cols[1]);
+          });
+          return prevClose;
+        });
+    }
+    return prevCloseByDate[date];
+  }
+
+  function statsHtml(acct){
+    const stat = (label, v) =>
+      `<div class="stat"><div class="label">${label}</div><div class="value">${v == null ? '&mdash;' : money(v)}</div></div>`;
+    return stat('Buying Power', acct.buyingPower)
+      + stat('Total Portfolio Value', acct.totalPortfolioValue)
+      + stat('Current Stocks Value', acct.currentStocksValue);
+  }
+
+  ACCOUNTS.forEach(({name, file}) => {
+    const wrap = document.createElement('div');
+    wrap.innerHTML = `
+      <div class="card">
+        <h3>${name}</h3>
+        <div class="stats">${statsHtml({})}</div>
+        <div class="updated"></div>
+      </div>
+      <div class="card" hidden>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Symbol</th><th>Shares</th><th>Avg Price</th><th>Current</th><th>Market Value</th><th>Gain/Loss</th><th>Day G/L</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>`;
+    accountsEl.appendChild(wrap);
+    const [summaryCard, holdingsCard] = wrap.querySelectorAll('.card');
+    const updatedEl = summaryCard.querySelector('.updated');
+
+    fetch(file, {cache: 'no-store'})
+      .then(r => r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status)))
+      .then(acct => {
+        summaryCard.querySelector('.stats').innerHTML = statsHtml({
+          buyingPower: acct.buyingPower || 0,
+          totalPortfolioValue: acct.totalPortfolioValue || 0,
+          currentStocksValue: acct.currentStocksValue || 0,
+        });
+        if (acct.lastUpdated) {
+          const d = new Date(acct.lastUpdated);
+          updatedEl.textContent = 'Last updated ' + (isNaN(d) ? acct.lastUpdated : d.toLocaleString());
+        }
+        if (Array.isArray(acct.holdings) && acct.holdings.length) {
+          return loadPrevClose(String(acct.lastUpdated || '').slice(0, 10)).then(prevClose => {
+            holdingsCard.querySelector('tbody').innerHTML = holdingsHtml(acct.holdings, prevClose);
+            holdingsCard.hidden = false;
+          });
+        }
+      })
+      .catch(err => {
+        const shortName = file.split('/').pop();
+        updatedEl.innerHTML = `<span class="error">Could not load ${shortName} (${err.message}).</span>`;
+      });
+  });
+
+  function holdingsHtml(holdings, prevClose){
+    return holdings.map(h => {
       // Prefer the broker's own figures (net of selling fees) when present.
       const mv = h.marketValue ?? (h.shares || 0) * (h.currentPrice || 0);
       const cost = (h.shares || 0) * (h.avgPrice || 0);
@@ -236,7 +262,6 @@
         ${dayCell}
       </tr>`;
     }).join('');
-    document.getElementById('holdings-card').hidden = false;
   }
 
   // --- PSE daily data: most active / winners / losers ---
