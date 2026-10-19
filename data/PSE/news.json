@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-16T12:02:11Z",
+  "generated": "2026-10-19T12:01:32Z",
   "note": "Compiled via web search, not a live feed. Refresh by asking Claude to look up news again for the current screener picks. The newsUrl for each company is a live, continuously-updating source you can open for anything more recent than the note below.",
   "companies": {
     "ABG": {
@@ -165,6 +165,18 @@
     "TUBIG": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-TUBIG/news/",
       "note": "Shares resumed trading on Oct 15, 2026 after a nearly 10-month suspension following the ₱6.6B backdoor listing of its water business into the former Coal Asia Holdings; plans a ₱1.8B follow-on offering as early as January to meet minimum public float."
+    },
+    "C": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-C/news/",
+      "note": "H1 2026 revenue rose 12% to ₱5.22B, led by a 32% jump in tugboat revenue, and operating profit rose 3% to ₱670M, but net profit was squeezed by debt servicing costs and forex volatility (reported Aug 18, 2026)."
+    },
+    "PRF4B": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-PRF4B/news/",
+      "note": "Series 4B preferred shares of Petron Corp. (PCOR), still outstanding after Petron completed redeeming its Series 3B preferreds in June 2026; the issuer's H1 2026 net income fell 27% to about ₱3.8B on higher crude and freight costs (reported Aug 4, 2026)."
+    },
+    "PXP": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-PXP/news/",
+      "note": "H1 2026 net loss widened to ₱31.6M from ₱22.8M as petroleum revenue fell about 36% on lower crude prices and volumes (reported Aug 4, 2026); chairman Pangilinan said it is courting foreign partners to fund its service contracts."
     }
   }
 }
