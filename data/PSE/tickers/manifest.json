@@ -162,6 +162,7 @@
     "FPI",
     "FRUIT",
     "FYN",
+    "GCASH",
     "GEO",
     "GERI",
     "GLO",
@@ -418,6 +419,6 @@
     "XG",
     "ZHI"
   ],
-  "count": 417,
-  "generated": "2026-10-19T07:07:31.668815Z"
+  "count": 418,
+  "generated": "2026-10-20T07:06:34.305073Z"
 }
