@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-19T12:01:32Z",
+  "generated": "2026-10-20T12:01:33Z",
   "note": "Compiled via web search, not a live feed. Refresh by asking Claude to look up news again for the current screener picks. The newsUrl for each company is a live, continuously-updating source you can open for anything more recent than the note below.",
   "companies": {
     "ABG": {
@@ -20,7 +20,7 @@
     },
     "IMI": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-IMI/news/",
-      "note": null
+      "note": "H1 2026 net income rose about 50% to US$14.0M from US$9.4M as revenue grew 4% to US$465M, helped by automotive camera/lighting, medical and power-module programs and a gross margin of 10.5% vs 8.7% (reported Aug 2026)."
     },
     "ION": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-ION/news/",
@@ -177,6 +177,14 @@
     "PXP": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-PXP/news/",
       "note": "H1 2026 net loss widened to ₱31.6M from ₱22.8M as petroleum revenue fell about 36% on lower crude prices and volumes (reported Aug 4, 2026); chairman Pangilinan said it is courting foreign partners to fund its service contracts."
+    },
+    "SM": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-SM/news/",
+      "note": "H1 2026 consolidated net income rose 8% to ₱45.9B as revenues grew 6% to ₱339.2B on sustained consumer spending, with banking contributing 47% of net income (reported Aug 18, 2026)."
+    },
+    "SSI": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-SSI/news/",
+      "note": "H1 2026 attributable net income fell 39.5% to ₱273.3M as operating expenses rose 15.5%, though revenue grew 12.3% to ₱15.1B and Q2 profit rose 44% to about ₱121M; completed its Marks & Spencer exit (reported Aug 2026)."
     }
   }
 }
