@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-10-19T15:10:26+08:00",
+  "lastUpdated": "2026-10-20T15:10:28+08:00",
   "buyingPower": 16513.28,
-  "totalPortfolioValue": 169138.02,
-  "currentStocksValue": 152624.74,
+  "totalPortfolioValue": 170482.69,
+  "currentStocksValue": 153969.41,
   "currency": "PHP",
   "holdings": [
     {
@@ -20,10 +20,10 @@
       "name": "Manila Electric Company",
       "shares": 150.0,
       "avgPrice": 297.2744,
-      "currentPrice": 447.0,
-      "marketValue": 66785.15,
-      "gainLoss": 22193.99,
-      "gainLossPercent": 49.77
+      "currentPrice": 456.0,
+      "marketValue": 68129.82,
+      "gainLoss": 23538.66,
+      "gainLossPercent": 52.79
     }
   ]
 }
