@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-20T12:01:33Z",
+  "generated": "2026-10-21T12:01:15Z",
   "note": "Compiled via web search, not a live feed. Refresh by asking Claude to look up news again for the current screener picks. The newsUrl for each company is a live, continuously-updating source you can open for anything more recent than the note below.",
   "companies": {
     "ABG": {
@@ -44,7 +44,7 @@
     },
     "TECH": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-TECH/news/",
-      "note": "A Cirtek unit signed a multi-million-dollar project with a Silicon Valley-based tech company; the company also approved an increase in authorized capital stock."
+      "note": "Swung to a US$2.8M H1 2026 net loss from a US$1.1M profit as revenue fell 4% to US$25M, mainly on a write-off tied to the June-approved sale of Quintel's operating assets to US-based John Mezzalingua Associates (reported Aug 19, 2026)."
     },
     "TUGS": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-TUGS/news/",
@@ -185,6 +185,10 @@
     "SSI": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-SSI/news/",
       "note": "H1 2026 attributable net income fell 39.5% to ₱273.3M as operating expenses rose 15.5%, though revenue grew 12.3% to ₱15.1B and Q2 profit rose 44% to about ₱121M; completed its Marks & Spencer exit (reported Aug 2026)."
+    },
+    "ROCK": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-ROCK/news/",
+      "note": "H1 2026 attributable net income rose about 42% to ₱2.7B on revenue up 41% to ₱13.5B (reported Aug 17, 2026); agreed in late Jul 2026 to pay ₱6.2B to raise its Alabang Commercial Corp. stake to 99.26%, and paid a record ₱0.1547/share dividend Sep 11."
     }
   }
 }
