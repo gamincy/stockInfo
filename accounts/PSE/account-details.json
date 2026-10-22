@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-10-21T15:10:14+08:00",
+  "lastUpdated": "2026-10-22T15:10:12+08:00",
   "buyingPower": 13228.19,
-  "totalPortfolioValue": 515701.55,
-  "currentStocksValue": 502473.36,
+  "totalPortfolioValue": 512871.77,
+  "currentStocksValue": 499643.58,
   "currency": "PHP",
   "holdings": [
     {
@@ -10,40 +10,40 @@
       "name": "Ionics, Inc.",
       "shares": 30000.0,
       "avgPrice": 3.4201,
-      "currentPrice": 2.97,
-      "marketValue": 88748.06,
-      "gainLoss": -13854.95,
-      "gainLossPercent": -13.5
+      "currentPrice": 2.91,
+      "marketValue": 86955.17,
+      "gainLoss": -15647.84,
+      "gainLossPercent": -15.25
     },
     {
       "symbol": "MER",
       "name": "Manila Electric Company",
       "shares": 200.0,
       "avgPrice": 598.7612,
-      "currentPrice": 445.4,
-      "marketValue": 88728.13,
-      "gainLoss": -31024.11,
-      "gainLossPercent": -25.91
+      "currentPrice": 440.0,
+      "marketValue": 87652.4,
+      "gainLoss": -32099.84,
+      "gainLossPercent": -26.81
     },
     {
       "symbol": "RCR",
       "name": "RL Commercial REIT, Inc.",
       "shares": 22700.0,
       "avgPrice": 4.9642,
-      "currentPrice": 6.18,
-      "marketValue": 139731.87,
-      "gainLoss": 27044.53,
-      "gainLossPercent": 24.0
+      "currentPrice": 6.25,
+      "marketValue": 141314.59,
+      "gainLoss": 28627.25,
+      "gainLossPercent": 25.4
     },
     {
       "symbol": "TEL",
       "name": "PLDT Inc.",
       "shares": 155.0,
       "avgPrice": 1368.8327,
-      "currentPrice": 1200.0,
-      "marketValue": 185265.3,
-      "gainLoss": -26903.77,
-      "gainLossPercent": -12.68
+      "currentPrice": 1190.0,
+      "marketValue": 183721.42,
+      "gainLoss": -28447.65,
+      "gainLossPercent": -13.41
     }
   ]
 }
