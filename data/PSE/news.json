@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-21T12:01:15Z",
+  "generated": "2026-10-22T12:02:02Z",
   "note": "Compiled via web search, not a live feed. Refresh by asking Claude to look up news again for the current screener picks. The newsUrl for each company is a live, continuously-updating source you can open for anything more recent than the note below.",
   "companies": {
     "ABG": {
@@ -12,7 +12,7 @@
     },
     "AT": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-AT/news/",
-      "note": "Swung to a ₱3.97B Q2 2026 net income from a ₱249.6M loss a year earlier on higher copper and gold prices (reported Aug 18, 2026); Sy-led Dominion Holdings agreed Aug 7 to buy a ~20.4% stake from Anglo Philippine for ₱857M."
+      "note": "Q3 2026 report showed net income surging to ₱7.57B from ₱218M a year earlier on higher copper prices, output and lower unit costs; board approved Oct 16, 2026 a ₱0.42/share (₱1.5B) cash dividend, record Nov 12, payable Dec 10."
     },
     "CNPF": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-CNPF/news/",
@@ -32,7 +32,7 @@
     },
     "PAL": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-PAL/news/",
-      "note": "H1 2026 net loss attributable of ₱1.84B vs ₱7.66B profit a year earlier, with a ₱6.12B Q2 loss (filed Aug 13, 2026); announced Sep 25 plans to resume Manila–Delhi and Mumbai flights in December 2026."
+      "note": "Japan Credit Rating Agency assigned Philippine Airlines an investment-grade BBB rating with a stable outlook (reported Oct 10, 2026), despite a ₱1.84B H1 2026 attributable net loss on fuel costs; Manila–Saipan flights resume Oct 25."
     },
     "PERC": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-PERC/news/",
@@ -92,11 +92,11 @@
     },
     "FOOD": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-FOOD/news/",
-      "note": "Board approved on Sep 2, 2026 an equity restructuring to wipe out about US$21.3M (~₱1.33B) of accumulated deficit, paving the way for a ₱660M capital infusion from parent Strongoak, subject to stockholder and regulatory approval; H1 2026 revenue fell to US$22.8M."
+      "note": "Stockholders approved on Oct 15, 2026 an equity restructuring cutting par value to ₱0.10 from ₱0.50 and parent Strongoak's subscription to 6B new shares at ₱0.11 each (₱660M) to address its accumulated deficit, subject to regulatory approval."
     },
     "LBC": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-LBC/news/",
-      "note": "H1 2026 net income fell 34.4% to about ₱119M on higher non-operating charges and taxes; service revenue grew 3% to ₱7.22B."
+      "note": "Won Taiwan regulatory approval in early Oct 2026 to sell its entire stake in loss-making unit Blue Eagle & LBC Service to Ruby Chang for NT$2M (~₱3.9M); H1 2026 attributable net income fell 34% to ₱113.6M."
     },
     "OPM": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-OPM/news/",
@@ -189,6 +189,14 @@
     "ROCK": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-ROCK/news/",
       "note": "H1 2026 attributable net income rose about 42% to ₱2.7B on revenue up 41% to ₱13.5B (reported Aug 17, 2026); agreed in late Jul 2026 to pay ₱6.2B to raise its Alabang Commercial Corp. stake to 99.26%, and paid a record ₱0.1547/share dividend Sep 11."
+    },
+    "DITO": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-DITO/news/",
+      "note": "Q1 2026 attributable net loss widened to ₱6.76B from ₱1.66B on DITO Telecommunity's network expansion costs (reported May 2026); Udenna cut its stake to 48.81% to make room for a new investor; annual meeting held Oct 21, 2026."
+    },
+    "NIKL": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-NIKL/news/",
+      "note": "Completed the ~US$30M acquisition of a 20% stake in a Kazakhstan copper miner (disclosed Sep 10, 2026) after H1 2026 attributable net income rose 93% to ₱4.06B on 10% higher ore sales of 8.65M WMT and higher nickel prices."
     }
   }
 }
