@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-22T12:02:02Z",
+  "generated": "2026-10-23T12:02:15Z",
   "note": "Compiled via web search, not a live feed. Refresh by asking Claude to look up news again for the current screener picks. The newsUrl for each company is a live, continuously-updating source you can open for anything more recent than the note below.",
   "companies": {
     "ABG": {
@@ -197,6 +197,18 @@
     "NIKL": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-NIKL/news/",
       "note": "Completed the ~US$30M acquisition of a 20% stake in a Kazakhstan copper miner (disclosed Sep 10, 2026) after H1 2026 attributable net income rose 93% to ₱4.06B on 10% higher ore sales of 8.65M WMT and higher nickel prices."
+    },
+    "DWC": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-DWC/news/",
+      "note": "Filed its Q2/H1 2026 results on Aug 14, 2026, with a trailing-12-month net loss of about ₱583M on roughly ₱1.03B revenue; in March 2026 it approved a further ₱250M subscription in Discovery Coron operator Euro Pacific Resorts."
+    },
+    "OPMB": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-OPMB/news/",
+      "note": null
+    },
+    "RLC": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-RLC/news/",
+      "note": "H1 2026 net income rose 12% to ₱9.0B (₱7.2B attributable, up 5%) on revenue up 10% to ₱25.4B (reported Aug 10, 2026); launched a new Robinsons Sports and Leisure unit in early Sep 2026 with projects opening from late 2026 to 2028."
     }
   }
 }
