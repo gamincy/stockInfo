@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-23T12:02:15Z",
+  "generated": "2026-10-26T12:01:25Z",
   "note": "Compiled via web search, not a live feed. Refresh by asking Claude to look up news again for the current screener picks. The newsUrl for each company is a live, continuously-updating source you can open for anything more recent than the note below.",
   "companies": {
     "ABG": {
@@ -209,6 +209,14 @@
     "RLC": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-RLC/news/",
       "note": "H1 2026 net income rose 12% to ₱9.0B (₱7.2B attributable, up 5%) on revenue up 10% to ₱25.4B (reported Aug 10, 2026); launched a new Robinsons Sports and Leisure unit in early Sep 2026 with projects opening from late 2026 to 2028."
+    },
+    "EW": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-EW/news/",
+      "note": "Set an indicative ₱10.80–₱11.05/share price for a ~₱9B stock rights offer backstopped by Filinvest (announced Sep 2026), with final pricing Nov 12 and a Nov 19 record date; H1 2026 net income fell 17% to ₱3.4B on higher provisions."
+    },
+    "OGP": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-OGP/news/",
+      "note": "H1 2026 net income jumped 206% to US$67.4M as revenue rose 63% to US$285.3M on higher gold prices, despite gold output falling 7% to 41,800 oz; declared a US$0.0075/share Q2 dividend payable Sep 17 (reported Aug 2026)."
     }
   }
 }
