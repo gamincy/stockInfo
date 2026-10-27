@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-10-26T15:10:13+08:00",
+  "lastUpdated": "2026-10-27T15:10:14+08:00",
   "buyingPower": 13228.19,
-  "totalPortfolioValue": 502737.96,
-  "currentStocksValue": 489509.77,
+  "totalPortfolioValue": 503235.98,
+  "currentStocksValue": 490007.79,
   "currency": "PHP",
   "holdings": [
     {
@@ -10,20 +10,20 @@
       "name": "Ionics, Inc.",
       "shares": 30000.0,
       "avgPrice": 3.4201,
-      "currentPrice": 2.88,
-      "marketValue": 86058.72,
-      "gainLoss": -16544.28,
-      "gainLossPercent": -16.12
+      "currentPrice": 2.95,
+      "marketValue": 88150.43,
+      "gainLoss": -14452.58,
+      "gainLossPercent": -14.09
     },
     {
       "symbol": "MER",
       "name": "Manila Electric Company",
       "shares": 200.0,
       "avgPrice": 598.7612,
-      "currentPrice": 424.8,
-      "marketValue": 84624.41,
-      "gainLoss": -35127.83,
-      "gainLossPercent": -29.33
+      "currentPrice": 441.6,
+      "marketValue": 87971.14,
+      "gainLoss": -31781.1,
+      "gainLossPercent": -26.54
     },
     {
       "symbol": "RCR",
@@ -40,10 +40,10 @@
       "name": "PLDT Inc.",
       "shares": 155.0,
       "avgPrice": 1368.8327,
-      "currentPrice": 1182.0,
-      "marketValue": 182486.32,
-      "gainLoss": -29682.75,
-      "gainLossPercent": -13.99
+      "currentPrice": 1150.0,
+      "marketValue": 177545.91,
+      "gainLoss": -34623.16,
+      "gainLossPercent": -16.32
     }
   ]
 }
