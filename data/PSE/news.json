@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-26T12:01:25Z",
+  "generated": "2026-10-27T12:01:35Z",
   "note": "Compiled via web search, not a live feed. Refresh by asking Claude to look up news again for the current screener picks. The newsUrl for each company is a live, continuously-updating source you can open for anything more recent than the note below.",
   "companies": {
     "ABG": {
@@ -100,7 +100,7 @@
     },
     "OPM": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-OPM/news/",
-      "note": null
+      "note": "JG Summit's board approved on Oct 22, 2026 buying 37.05B OPM shares (8.40B Class A, 28.66B Class B) from its unit JG Summit Capital Services for about ₱519M at a 30-day VWAP, raising its direct stake to about 20%; crossing set for Oct 26."
     },
     "PLUS": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-PLUS/news/",
@@ -153,6 +153,14 @@
     "SMPH": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-SMPH/news/",
       "note": "H1 2026 net income was flat at ₱24.5B as revenue rose 5% to ₱71.7B, led by an 8% gain in mall revenue to ₱41.8B, offset by higher costs (reported Aug 10, 2026); flagship SM Nuvali mall slated to open in Q4 2026."
+    },
+    "MYNLD": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-MYNLD/news/",
+      "note": "H1 2026 net income rose 14% to ₱8.51B from ₱7.47B as consolidated revenue grew 4.1% to ₱19.11B (reported Aug 2026); regulators set a Q4 2026 FX adjustment to −₱0.01/cu.m from −₱0.25, lifting bills from October."
+    },
+    "PNB": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-PNB/news/",
+      "note": "Nine-month 2026 net income rose 15% to ₱21.3B from ₱18.5B as gross loans grew 13% to ₱793B and the gross NPL ratio fell to 4% from 5.2%, with a CET1 ratio of 19.3% (reported Oct 23, 2026)."
     },
     "OV": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-OV/news/",
