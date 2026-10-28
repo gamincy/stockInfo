@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-27T12:01:35Z",
+  "generated": "2026-10-28T12:01:55Z",
   "note": "Compiled via web search, not a live feed. Refresh by asking Claude to look up news again for the current screener picks. The newsUrl for each company is a live, continuously-updating source you can open for anything more recent than the note below.",
   "companies": {
     "ABG": {
@@ -80,7 +80,7 @@
     },
     "CEB": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-CEB/news/",
-      "note": "Swung to an H1 2026 net loss of ₱5.87B from a ₱8.97B profit as fuel costs and ₱2.46B in FX losses pushed expenses up 23%; revenue rose 8% to ₱68.56B on 14.5M passengers (disclosed Aug 6, 2026)."
+      "note": "Repurchased common shares at about ₱22.50–₱24 each from Oct 12–22, 2026 under a fresh ₱2B allotment of its buyback program (about ₱1.51B unused as of Oct 21), following an H1 2026 net loss of ₱5.87B on fuel costs and FX losses."
     },
     "FCG": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-FCG/news/",
@@ -112,7 +112,7 @@
     },
     "CEBCP": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-CEBCP/news/",
-      "note": "Cumulative convertible preferred shares of Cebu Air (CEB), set for mandatory 1:1 conversion into common shares in 2027; the issuer swung to an H1 2026 net loss of ₱5.87B on fuel costs and FX losses (disclosed Aug 6, 2026)."
+      "note": "Cebu Air (CEB) bought back these convertible preferred shares (mandatory 1:1 conversion to common in 2027) at about ₱27.95–₱30 in mid-Oct 2026 under its buyback program; the issuer posted an H1 2026 net loss of ₱5.87B."
     },
     "COL": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-COL/news/",
@@ -225,6 +225,18 @@
     "OGP": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-OGP/news/",
       "note": "H1 2026 net income jumped 206% to US$67.4M as revenue rose 63% to US$285.3M on higher gold prices, despite gold output falling 7% to 41,800 oz; declared a US$0.0075/share Q2 dividend payable Sep 17 (reported Aug 2026)."
+    },
+    "APO": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-APO/news/",
+      "note": null
+    },
+    "FEU": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-FEU/news/",
+      "note": "Completed its ₱156M takeover of University of Nueva Caceres-Bataan operator Bataan Peninsula Educational Institution (reported Sep 28, 2026), taking a 54.78% stake via ₱106M in new shares plus ₱50M for most of the school's land."
+    },
+    "SPNEC": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-SPNEC/news/",
+      "note": "MTerra Solar Phase 1 began commercial operations on Sep 4, 2026, supplying 600MWac to Meralco, as SPNEC prepares a Q4 2026 merger with parent MGEN Renewable Energy and a planned rename to MGEN Renewable Energy Holdings (MGENR)."
     }
   }
 }
