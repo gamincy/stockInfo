@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-28T12:01:55Z",
+  "generated": "2026-10-29T12:01:00Z",
   "note": "Compiled via web search, not a live feed. Refresh by asking Claude to look up news again for the current screener picks. The newsUrl for each company is a live, continuously-updating source you can open for anything more recent than the note below.",
   "companies": {
     "ABG": {
@@ -236,7 +236,7 @@
     },
     "SPNEC": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-SPNEC/news/",
-      "note": "MTerra Solar Phase 1 began commercial operations on Sep 4, 2026, supplying 600MWac to Meralco, as SPNEC prepares a Q4 2026 merger with parent MGEN Renewable Energy and a planned rename to MGEN Renewable Energy Holdings (MGENR)."
+      "note": "SEC approved on Oct 26, 2026 SPNEC's amended articles changing its corporate name to MGEN Renewables Inc., ahead of a planned Q4 2026 merger with parent MGEN Renewable Energy; MTerra Solar Phase 1 began commercial operations Sep 4, 2026."
     }
   }
 }
