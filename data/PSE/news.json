@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-29T12:01:00Z",
+  "generated": "2026-10-30T12:01:36Z",
   "note": "Compiled via web search, not a live feed. Refresh by asking Claude to look up news again for the current screener picks. The newsUrl for each company is a live, continuously-updating source you can open for anything more recent than the note below.",
   "companies": {
     "ABG": {
@@ -236,7 +236,15 @@
     },
     "SPNEC": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-SPNEC/news/",
-      "note": "SEC approved on Oct 26, 2026 SPNEC's amended articles changing its corporate name to MGEN Renewables Inc., ahead of a planned Q4 2026 merger with parent MGEN Renewable Energy; MTerra Solar Phase 1 began commercial operations Sep 4, 2026."
+      "note": "Now renamed MGEN Renewables Inc., its board approved (disclosed Oct 28, 2026) acquiring five renewable-energy investments from MGEN Renewable Energy via a ₱4.98B share swap of about 3.11B new shares at ₱1.60 each, a 30% premium to the Oct 23 close."
+    },
+    "ALTER": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-ALTER/news/",
+      "note": "FY2026 (to Jun 30) net income rose 1.8% to ₱168.2M as revenue grew 31% to ₱471.8M (reported Sep 24, 2026); raised ₱2B via fixed-rate notes listed on PDEx Sep 30, with its 128 MW Tanay and 64 MW Alabat wind projects 90% and 85% complete."
+    },
+    "DD": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-DD/news/",
+      "note": "H1 2026 core net income jumped 162% to ₱2.41B as consolidated revenue rose 23% to ₱8.55B (reported Aug 17, 2026); completed acquiring 98.61% of MerryMart and is preparing a planned S$300M hospitality REIT in Singapore for Hotel101."
     }
   }
 }
