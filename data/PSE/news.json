@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-30T12:01:36Z",
+  "generated": "2026-11-03T12:02:17Z",
   "note": "Compiled via web search, not a live feed. Refresh by asking Claude to look up news again for the current screener picks. The newsUrl for each company is a live, continuously-updating source you can open for anything more recent than the note below.",
   "companies": {
     "ABG": {
@@ -244,7 +244,15 @@
     },
     "DD": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-DD/news/",
-      "note": "H1 2026 core net income jumped 162% to ₱2.41B as consolidated revenue rose 23% to ₱8.55B (reported Aug 17, 2026); completed acquiring 98.61% of MerryMart and is preparing a planned S$300M hospitality REIT in Singapore for Hotel101."
+      "note": "Nine-month 2026 core net income rose 253.59% to ₱3.91B as consolidated revenue nearly doubled to ₱20.78B, with Q3 net income of ₱1.13B vs ₱183.67M and foreign-currency revenue topping 59% of quarterly core revenue on Hotel101's expansion (reported Oct 30, 2026)."
+    },
+    "IS": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-IS/news/",
+      "note": null
+    },
+    "SLF": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-SLF/news/",
+      "note": "Unveiled a global rebrand on Oct 15, 2026, renaming itself Sunlife with a new logo and the tagline \"Making life brighter\"; said Oct 22 it will not redeem its Class A rate-reset preferred shares and will report Q3 2026 results on Nov 4."
     }
   }
 }
