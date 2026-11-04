@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-03T12:02:17Z",
+  "generated": "2026-11-04T12:01:53Z",
   "note": "Compiled via web search, not a live feed. Refresh by asking Claude to look up news again for the current screener picks. The newsUrl for each company is a live, continuously-updating source you can open for anything more recent than the note below.",
   "companies": {
     "ABG": {
@@ -253,6 +253,14 @@
     "SLF": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-SLF/news/",
       "note": "Unveiled a global rebrand on Oct 15, 2026, renaming itself Sunlife with a new logo and the tagline \"Making life brighter\"; said Oct 22 it will not redeem its Class A rate-reset preferred shares and will report Q3 2026 results on Nov 4."
+    },
+    "BPI": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-BPI/news/",
+      "note": "Nine-month 2026 net income fell 3.2% to ₱48.9B as provisions jumped 69% to ₱19.9B and expenses rose 12.5%, despite revenue up 9.8% to ₱156.3B and loans up 13.6% to ₱2.7T (disclosed Oct 21, 2026)."
+    },
+    "LPZ": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-LPZ/news/",
+      "note": "Lopez group's ABS-CBN won shareholder approval on Sep 30, 2026 to triple authorized capital to ₱4.5B for a ₱6B infusion led by I&C Holdings (₱3.5B, 27.06%), cutting Lopez Inc.'s stake to 44.35% from 78.4%; Lopez family branches add ₱2.2B."
     }
   }
 }
