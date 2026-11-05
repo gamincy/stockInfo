@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-04T12:01:53Z",
+  "generated": "2026-11-05T12:02:36Z",
   "note": "Compiled via web search, not a live feed. Refresh by asking Claude to look up news again for the current screener picks. The newsUrl for each company is a live, continuously-updating source you can open for anything more recent than the note below.",
   "companies": {
     "ABG": {
@@ -24,7 +24,7 @@
     },
     "ION": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-ION/news/",
-      "note": "Paid a ₱0.10/share dividend (about 7.1% yield) in June 2026."
+      "note": "H1 2026 net income rose to about US$2.9M from US$1.6M as revenue grew about 30% to US$68.7M, with Q2 revenue up 44% to US$37.6M (results filed Aug 2026); paid a ₱0.10/share dividend on Jun 25, 2026."
     },
     "NRCP": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-NRCP/news/",
@@ -32,7 +32,7 @@
     },
     "PAL": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-PAL/news/",
-      "note": "Japan Credit Rating Agency assigned Philippine Airlines an investment-grade BBB rating with a stable outlook (reported Oct 10, 2026), despite a ₱1.84B H1 2026 attributable net loss on fuel costs; Manila–Saipan flights resume Oct 25."
+      "note": "Nine-month 2026 net loss of US$159M (₱9.74B) vs a US$158.7M profit as fuel costs rose to US$1.02B, despite revenue up 4% to US$2.5B; Q3 attributable net loss was ₱8.06B vs a ₱1.37B profit (reported Nov 4, 2026)."
     },
     "PERC": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-PERC/news/",
@@ -56,7 +56,7 @@
     },
     "PX": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-PX/news/",
-      "note": "H1 2026 net loss of ₱200.4M vs ₱301.4M profit on forex losses on dollar loans, though core income rose 56% to ₱212M after a ₱392M Q2 profit; Silangan commissioning targeted for Q4 2026 (reported late Jul 2026)."
+      "note": "Nine-month 2026 net income fell 77% to ₱110M from ₱482M on ₱649M forex losses on dollar loans, though core income rose 56% to ₱749M; Q3 net income rose 72% to ₱310M and Silangan produced its first copper cathodes and doré (reported Oct 30, 2026)."
     },
     "CNVRG": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-CNVRG/news/",
@@ -76,7 +76,7 @@
     },
     "APX": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-APX/news/",
-      "note": "H1 2026 net income rose 68% to ₱5.39B on revenue up 35% to ₱12.84B as higher gold and silver prices offset lower volumes (reported Aug 12, 2026); Razon's holding firm raised its stake to 67% in July."
+      "note": "Disclosed on Oct 20, 2026 a proposed sale of unit Monte Oro's 30% stake in gas block SC72 to affiliate Prime Oil & Gas, pending valuation and DOE approval; H1 2026 net income rose 68% to ₱5.39B on revenue up 35% to ₱12.84B."
     },
     "CEB": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-CEB/news/",
@@ -248,7 +248,7 @@
     },
     "IS": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-IS/news/",
-      "note": null
+      "note": "Posted Q3 (to Jul 31, 2026) net income of about ₱0.12M vs a ₱0.34M loss a year earlier on revenue of about ₱0.36M (reported Sep 2026); its auditor raised a going-concern doubt in March 2026 and it filed a negative-equity timetable in May."
     },
     "SLF": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-SLF/news/",
@@ -261,6 +261,14 @@
     "LPZ": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-LPZ/news/",
       "note": "Lopez group's ABS-CBN won shareholder approval on Sep 30, 2026 to triple authorized capital to ₱4.5B for a ₱6B infusion led by I&C Holdings (₱3.5B, 27.06%), cutting Lopez Inc.'s stake to 44.35% from 78.4%; Lopez family branches add ₱2.2B."
+    },
+    "FB": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-FB/news/",
+      "note": "Nine-month 2026 net income fell 9% to ₱30.6B from ₱33.7B on higher costs and softer consumer demand, as revenue rose 2% to ₱309.6B and EBITDA slipped 5% to ₱55.5B (disclosed Nov 4, 2026)."
+    },
+    "JFC": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-JFC/news/",
+      "note": "CEO Ernesto Tanmantiong said in Oct 2026 that JFC plans to list its international unit on Hong Kong's main board, targeted for Q3 2027 in place of a US listing, with JFC staying on the PSE; it also identified 1,500+ potential Philippine store sites for 2027–2030."
     }
   }
 }
