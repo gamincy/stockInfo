@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-05T12:02:36Z",
+  "generated": "2026-11-06T12:02:05Z",
   "note": "Compiled via web search, not a live feed. Refresh by asking Claude to look up news again for the current screener picks. The newsUrl for each company is a live, continuously-updating source you can open for anything more recent than the note below.",
   "companies": {
     "ABG": {
@@ -132,11 +132,11 @@
     },
     "AC": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-AC/news/",
-      "note": "Signed a ~₱44.5B deal on Sep 21, 2026 for Mitsubishi Corp. to raise its economic stake from 4.7% to 15% (20% voting) via new shares and a ₱650/share tender offer for up to ~30M shares; Ayala keeps ~₱20B in net proceeds."
+      "note": "Started on Nov 4, 2026 a ₱650/share tender offer for up to 30.07M shares (~₱19.5B), open until Jan 8, 2027, as part of Mitsubishi Corp.'s ~₱44.5B deal to lift its economic stake to 15% (20% voting), which shareholders backed on Oct 27."
     },
     "CHP": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-CHP/news/",
-      "note": "H1 2026 net loss narrowed 83% to ₱207M from ₱1.23B, with the Q2 loss cut to ₱4M from ₱682M on higher cement volumes and prices (per parent DMCI, Aug 7, 2026); unit Solid Cement secured a ₱5B BDO term loan in April 2026."
+      "note": "Nine-month 2026 attributable net loss narrowed 75% to ₱402M on higher sales and cost controls (per parent DMCI, Nov 6, 2026); CEO Herbert Consunji said Nov 3 it targets a return to profit in 2027 and is weighing cement price hikes from mid-November."
     },
     "GTCAP": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-GTCAP/news/",
@@ -269,6 +269,18 @@
     "JFC": {
       "newsUrl": "https://www.tradingview.com/symbols/PSE-JFC/news/",
       "note": "CEO Ernesto Tanmantiong said in Oct 2026 that JFC plans to list its international unit on Hong Kong's main board, targeted for Q3 2027 in place of a US listing, with JFC staying on the PSE; it also identified 1,500+ potential Philippine store sites for 2027–2030."
+    },
+    "CBC": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-CBC/news/",
+      "note": "Nine-month 2026 net income rose 12% to ₱22.6B from ₱20.2B as net interest income grew 14% to ₱60.7B on a 4.73% margin and net loans rose 19% to ₱1.2T (disclosed Nov 5, 2026)."
+    },
+    "DMC": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-DMC/news/",
+      "note": "Nine-month 2026 net income rose 28% to ₱15B from ₱11.7B, with Q3 up 33% to ₱3.6B, led by Semirara Mining and Power (₱6.3B), DMCI Homes (₱3.1B) and DMCI Mining (₱2B, up 180%) (reported Nov 6, 2026)."
+    },
+    "MONDE": {
+      "newsUrl": "https://www.tradingview.com/symbols/PSE-MONDE/news/",
+      "note": "Nine-month 2026 attributable net income rose 21.9% to ₱8.12B and core income 16% to ₱8.34B as revenue grew 7% to ₱67.89B; declared a ₱0.26/share cash dividend, up from ₱0.24 (reported Nov 4, 2026)."
     }
   }
 }
