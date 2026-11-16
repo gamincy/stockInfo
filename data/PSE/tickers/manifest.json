@@ -241,6 +241,7 @@
     "MFC",
     "MFIN",
     "MG",
+    "MGENR",
     "MHC",
     "MJC",
     "MJIC",
@@ -419,6 +420,6 @@
     "XG",
     "ZHI"
   ],
-  "count": 418,
-  "generated": "2026-11-13T07:08:34.704959Z"
+  "count": 419,
+  "generated": "2026-11-16T07:08:09.510494Z"
 }
