@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-11-17T15:10:27+08:00",
+  "lastUpdated": "2026-11-18T15:10:23+08:00",
   "buyingPower": 16513.28,
-  "totalPortfolioValue": 171996.69,
-  "currentStocksValue": 155483.41,
+  "totalPortfolioValue": 169835.26,
+  "currentStocksValue": 153321.98,
   "currency": "PHP",
   "holdings": [
     {
@@ -10,10 +10,10 @@
       "name": "Ionics, Inc.",
       "shares": 31000.0,
       "avgPrice": 3.41,
-      "currentPrice": 3.1,
-      "marketValue": 95720.41,
-      "gainLoss": -9989.6,
-      "gainLossPercent": -9.45
+      "currentPrice": 3.03,
+      "marketValue": 93558.98,
+      "gainLoss": -12151.02,
+      "gainLossPercent": -11.49
     },
     {
       "symbol": "MER",

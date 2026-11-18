@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-11-17T15:10:13+08:00",
+  "lastUpdated": "2026-11-18T15:10:13+08:00",
   "buyingPower": 13228.19,
-  "totalPortfolioValue": 472131.83,
-  "currentStocksValue": 458903.64,
+  "totalPortfolioValue": 471539.68,
+  "currentStocksValue": 458311.49,
   "currency": "PHP",
   "holdings": [
     {
@@ -10,10 +10,10 @@
       "name": "Ionics, Inc.",
       "shares": 30000.0,
       "avgPrice": 3.4201,
-      "currentPrice": 3.1,
-      "marketValue": 92632.65,
-      "gainLoss": -9970.35,
-      "gainLossPercent": -9.72
+      "currentPrice": 3.03,
+      "marketValue": 90540.95,
+      "gainLoss": -12062.06,
+      "gainLossPercent": -11.76
     },
     {
       "symbol": "MER",
@@ -30,20 +30,20 @@
       "name": "RL Commercial REIT, Inc.",
       "shares": 22700.0,
       "avgPrice": 4.9642,
-      "currentPrice": 5.98,
-      "marketValue": 135209.8,
-      "gainLoss": 22522.46,
-      "gainLossPercent": 19.99
+      "currentPrice": 5.92,
+      "marketValue": 133853.18,
+      "gainLoss": 21165.84,
+      "gainLossPercent": 18.78
     },
     {
       "symbol": "TEL",
       "name": "PLDT Inc.",
       "shares": 155.0,
       "avgPrice": 1368.8327,
-      "currentPrice": 980.5,
-      "marketValue": 151377.19,
-      "gainLoss": -60791.88,
-      "gainLossPercent": -28.65
+      "currentPrice": 999.0,
+      "marketValue": 154233.36,
+      "gainLoss": -57935.71,
+      "gainLossPercent": -27.31
     }
   ]
 }
