@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-11-23T15:10:25+08:00",
+  "lastUpdated": "2026-11-24T15:15:24+08:00",
   "buyingPower": 16513.28,
-  "totalPortfolioValue": 132891.76,
-  "currentStocksValue": 116378.48,
+  "totalPortfolioValue": 133290.18,
+  "currentStocksValue": 116776.9,
   "currency": "PHP",
   "holdings": [
     {
@@ -10,20 +10,20 @@
       "name": "Ionics, Inc.",
       "shares": 31000.0,
       "avgPrice": 3.41,
-      "currentPrice": 2.0,
-      "marketValue": 61755.1,
-      "gainLoss": -43954.9,
-      "gainLossPercent": -41.58
+      "currentPrice": 2.04,
+      "marketValue": 62990.2,
+      "gainLoss": -42719.8,
+      "gainLossPercent": -40.41
     },
     {
       "symbol": "MER",
       "name": "Manila Electric Company",
       "shares": 150.0,
       "avgPrice": 297.2744,
-      "currentPrice": 365.6,
-      "marketValue": 54623.38,
-      "gainLoss": 10032.22,
-      "gainLossPercent": 22.5
+      "currentPrice": 360.0,
+      "marketValue": 53786.7,
+      "gainLoss": 9195.54,
+      "gainLossPercent": 20.62
     }
   ]
 }
